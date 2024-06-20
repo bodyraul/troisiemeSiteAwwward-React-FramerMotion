@@ -5,12 +5,12 @@ import pointImg from '../../assets/img/carrerOrange.svg'
 import triangleImg from '../../assets/img/triangleHautBas.svg'
 import statImg from '../../assets/img/troisBarres.svg'
 import { motion,useTransform,useScroll,useMotionValueEvent } from "framer-motion"
-import { useInView } from "react-intersection-observer";
 import { useEffect } from 'react'
 import imgUne from '../../assets/img/mainImage.png'
 import imgdeux from '../../assets/img/homepage.jpeg'
 import imgTrois from '../../assets/img/homepage2.jpeg'
 import imgQuatre from '../../assets/img/stats.png'
+import { useState } from 'react'
 
 export default function Merchandising({setcolor}) {
 
@@ -55,9 +55,26 @@ export default function Merchandising({setcolor}) {
   const opacityImgTrois = useTransform(scrollYProgress,[0.72,0.77,0.87,0.92],[0,1,1,0]);
   const opacityImgQuatre = useTransform(scrollYProgress,[0.93,1],[0,1]);
 
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 1350px)").matches
+  )
 
-  return (
-    <div ref={target}  className='allContainerMarchansising'>
+  useEffect(() => {
+    function eventResponsive(e){
+      setMatches( e.matches );
+    }
+
+    window.matchMedia("(max-width: 1350px)").addEventListener('change', eventResponsive);
+  
+    return () => {
+      window.matchMedia("(max-width: 1350px)").removeEventListener('change', eventResponsive);
+    }
+  }, [])
+
+
+  if(!matches){
+    return (
+      <div ref={target}  className='allContainerMarchansising'>
         <div className='contenuMarchandising'>
             <div className="topVide">
 
@@ -124,5 +141,42 @@ export default function Merchandising({setcolor}) {
 
         </div>
     </div>
-  )
+    )
+  }
+
+  if(matches){
+    return(
+      <div ref={target}  className='allContainerMarchansising'>
+        <div className='divUneMarchandising'>
+            <h1>The App for Fashion Merchandising</h1>
+            <p>Simple for you to manage.<br></br>Easier to discover</p>
+            <img src={imgUne} alt="" />
+        </div>
+        <div className='divDeuxMarchandising'>
+          <div className='contenuTroisDivMarchansing'>
+            <img src={pointImg} alt="" />
+            <h1>Manual curation at its finest</h1>
+            <p>Curating products does not have to feel like doing your taxes. View stock status tags and preview your storefront on mobile & desktop.</p>
+            <img src={imgdeux} alt="" />
+          </div>
+        </div>
+        <div className='divTroisMarchandising'>
+          <div className='contenuTroisDivMarchansing'>
+            <img src={triangleImg} alt="" />
+            <h1>Manual curation at its finest</h1>
+            <p>Curating products does not have to feel like doing your taxes. View stock status tags and preview your storefront on mobile & desktop.</p>
+            <img src={imgTrois} alt="" />
+          </div>
+        </div>
+        <div className='divQuatreMarchandising'>
+          <div className='contenuTroisDivMarchansing'>
+            <img src={statImg} alt="" />
+            <h1>Auto-generated merchandising analytics</h1>
+            <p>The easiest for brands to be data-driven by tracking sales and stock data for products and collections.</p>
+            <img src={imgQuatre} alt="" />
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
