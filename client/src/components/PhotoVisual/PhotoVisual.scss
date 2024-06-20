@@ -1,0 +1,248 @@
+@import '../../variable';
+@import url('../../_font.scss');
+
+body{
+    background-color: $gris;
+}
+
+.blocPhotoVisual{
+    width: 100%;
+    height: 87%;
+    margin-bottom: 20px;
+    @include display(row,center,center);
+    .photoPlusVisual{
+        height: 100%;
+        width: 70%;
+        max-width: 1800px;
+        @include display(row,center,space-between);
+        .blocVisual{
+            transform: translateY(10%);
+            transition: transform 0.5s ease-out,opacity 0.2s ease-out;
+            opacity: 0;
+            height: 100%;
+            width: 49%;
+            background-color: $blanc;
+            border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+             @include display(column,left,center);
+            .blocVisualP1{
+                transform: translateY(40%);
+                 transition: transform 0.6s ease-out;
+                margin: 0 50px;
+                width: 170px;
+                @include display(row,center,space-around);
+                padding: 10px;
+                background-color: $moyenGris;
+                border-radius: 10px;
+                font-family: Montreal-Regular;
+                font-size: 16px;
+            }
+            .blocVisualP2{
+                transform: translateY(15%);
+                 transition: transform 0.60s ease-out;
+                margin: 50px 50px 50px 50px;
+                font-family:Montreal-Bold ;
+                font-size: 75px;
+                line-height: 75px;
+                letter-spacing: 3px;
+            }
+            .blocVisualP3{
+                transform: translateY(100%);
+                transition: transform 0.60s ease-out;
+                margin: 0 50px 50px 50px ;
+                color: $grisTexte;
+                font-family: Montreal-Medium;
+                font-weight: bold;
+                letter-spacing: 1px;
+                font-size: 20px;
+                span{
+                    line-height: 25px;
+                }
+            }
+            .btnOrange{
+                transform: translateY(55%);
+                transition: transform 0.60s ease-out;
+                background-color: $orange;
+                border: solid red 1px;
+                width: 150px;
+                height: 100px;
+                margin-left: 50px;
+                font-family: Montreal-Medium;
+                font-size: 17px;
+                border-radius: 30px;
+                @include display(row,center,center);
+                &:hover{
+                    cursor: pointer;
+                }
+                .pBtnorange{
+                    width: 100%;
+                    height:50%;
+                    position: relative;
+                    overflow: hidden;
+                    .visibleSpan{
+                        position: absolute;
+                        @include display(row,center,center);
+                        width: 100%;
+                        height: 100%;
+                        transition: 0.1s 0.1s all;
+                   
+                    }
+                    .invisibleSpan{
+                        position: absolute;
+                        @include display(row,center,center);
+                        width: 100%;
+                        height: 100%;
+                        transition: 0.1s  all;
+                        transform: translateY(35px);
+                    }
+                    .invisibleSpan.upSpan{
+                        transform: translateY(0px);
+                        transition: 0.1s 0.1s all;                
+                    }
+                    .visibleSpan.upSpan{
+                        transform: translateY(-35px);
+                        transition: 0.1s  all;   
+                    }
+                }
+            }
+        }
+        .blocPhotoDeVisual{
+            transform: translateY(10%);
+            transition: transform 0.5s 0.4s ease-out,opacity 0.2s 0.4s ease-out;
+            opacity: 0;
+            height: 100%;
+            width: 49%;
+            background-color: $blanc;
+            border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            position: relative;
+            @include display(row,center,center);
+            perspective: 1500px;
+            #imgSolo{
+                position: absolute;
+                width: 12%;
+                transform:scale(2) translateX(45.5%) translateY(-44%) rotateX(6deg) rotateY(-16deg) ;
+                transition: all 0.1s linear;
+            }
+            .bigphoto{
+                width: 90%;
+                transform: rotateX(6deg) rotateY(-16deg);
+                transition: all 0.1s linear;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1740px) {
+    .blocPhotoVisual{
+        height: 800px;
+        .photoPlusVisual{
+            width: 80%;
+            .blocVisual{
+                .blocVisualP2{
+                   font-size: 60px;
+                   line-height: 65px;
+                }
+            }
+            .blocPhotoDeVisual{
+                .bigphoto{
+                    width: 97%;
+                    
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 1285px) {
+    .blocPhotoVisual{
+        .photoPlusVisual{
+            .blocVisual{
+                .blocVisualP2{
+                   font-size: 45px;
+                   line-height: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .blocPhotoVisual{
+        height: auto;
+        margin-bottom: 0px;
+        .photoPlusVisual{
+            width: 90%;
+            @include display(column,center,space-between);
+            .blocVisual{
+                height: 600px;
+                width: 100%;
+                margin-bottom: 17px;
+                .blocVisualP2{
+                    font-size: 75px;
+                    line-height: 75px;
+                }
+            }
+            .blocPhotoDeVisual{
+                height: auto;
+                width: 100%;
+                padding: 20px;
+                margin-bottom: 17px;
+                .bigphoto{
+                    width: 80vw;
+                    transform: rotateX(0deg) rotateY(0deg);
+                }
+                #imgSolo{
+                    width: 10%;
+                    transform:scale(0) translateX(45.5%) translateY(-44%) rotateX(0deg) rotateY(0deg) ;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 680px) {
+    .blocPhotoVisual{
+        .photoPlusVisual{
+            .blocVisual{
+                .blocVisualP2{
+                    font-size: 45px;
+                    line-height: 50px;
+                }
+                .btnOrange{
+                    width: 150px;
+                    height: 60px;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .blocPhotoVisual{
+        .photoPlusVisual{
+            
+            .blocVisual{
+                
+                .blocVisualP2{
+                    font-size: 33px;
+                    line-height: 30px;
+                }
+                .blocVisualP3{
+                    font-size: 17px;
+                    span{
+                        line-height: 20px;
+                    }
+                }
+            }
+            .blocPhotoDeVisual{
+                .bigphoto{
+                    width: 97%;
+                }
+            }
+        }
+    }
+}

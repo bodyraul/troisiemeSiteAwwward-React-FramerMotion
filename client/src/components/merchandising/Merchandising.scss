@@ -1,0 +1,170 @@
+@import url('../../_font.scss');
+@import '../../variable';
+
+
+
+.allContainerMarchansising{
+    height: 300vh;
+    width: 100%;
+    @include display(column,center,start);
+    position: relative;
+    .contenuMarchandising{
+        position: sticky;
+        top: 0%;
+        height: 100vh;
+        width: 70%;
+        max-width: 1800px;
+        .topVide{
+            height: 145px;
+            width: 100%;
+        }
+        .MarchandisingPlusImg{
+            height: calc(100% - 145px);
+            @include display(row,start,space-between);
+            .fashionMarchandising{
+                position: relative;
+                @include display(column,center,start);
+                border-radius: 70px;
+                width: 42%;
+                min-width: 500px;
+                background-color: $bgColorCard1;
+                height: calc(100% - 30px);
+                overflow: hidden;
+                .titreMarchandising{
+                    color: $blanc;
+                    font-size: 50px;
+                    font-family: Montreal-Bold;
+                    text-align: start;
+                    width: 100%;
+                    padding: 50px 0 0 50px;
+                    transition: all 0.3s linear;
+                }
+                .descriptionMerchandising{
+                    color: #747474;
+                    line-height: 28px;
+                    font-family: Montreal-Bold;
+                    font-size: 20px;
+                    text-align: start;
+                    width: 100%;
+                    padding: 10px 0 0 50px;
+                    transition: all 0.3s linear;
+                }
+                #pCache1{
+                    z-index: 1;
+                    background-color: $bgColorCard1;
+                    bottom: calc(0% + 18px);
+                    transition: all 0.3s linear;
+                }
+                #pCache2{
+                    z-index: 2;
+                    background-color: $bgColorCard1;
+                    bottom: calc(0% - 50px);
+                    transition: all 0.3s linear;
+                }
+                #pCache3{
+                    bottom: calc(0% - 118px);
+                    z-index: 3;
+                    background-color: $bgColorCard1;
+                    transition: all 0.3s linear;
+
+                }
+                .pCache{
+                    height: 240px;
+                    width: calc(100% - 100px);
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    .affichageCache{
+                        @include display(row,center,left);
+                        height: 24%;
+                        background-color: $grisParaCache;
+                        color: $blanc;
+                        font-family: Montreal-Bold;
+                        font-size: 25px;
+                        padding: 20px 0 20px 10px;
+                        border-radius: 15px;
+                        img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        p{
+                            margin-left: 10px;
+                            @include display(row,center,center);
+                        }
+                    }
+                    .contenuCache{
+                        height: 70%;
+                        transition: all 0.2s linear;
+                        @include display(column,start,space-evenly);
+                        .titreCache{
+                            color: $blanc;
+                            font-family: Montreal-Bold;
+                            font-size: 33px;
+                        }
+                        .texteCache{
+                            color: #747474;
+                            font-family: Montreal-Bold;
+                            font-size: 20px;
+                            line-height: 28px;
+                        }
+                    }
+                }
+            }
+            .imgMarchandising{
+                width: 56%;
+                background-color: yellow;
+                height: calc(100% - 30px);
+                background-color: $blanc;
+                border-radius: 70px;
+                position: relative;
+                img{
+                    width: 85%;
+                    
+                    position: absolute;
+                    left: 50%;
+                    transform: translate3d(-50%,-50%,0);
+                    top: 50%;
+                    box-shadow:  rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    border-radius: 40px;
+                    transition: all 0.3s linear;
+                }
+                #img1{
+                    z-index: 5;
+                }
+                #img2{
+                    z-index: 4;
+                    opacity: 0;
+                }
+                #img3{
+                    z-index: 3;
+                    opacity: 0;
+                }
+                #img4{
+                    z-index: 2;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    .target{
+        position: absolute;
+        height: 200vh;
+        width: 20px;
+        top: 100vh;
+    }
+}
+
+
+@media screen and (max-width: 1740px) {
+    .allContainerMarchansising{
+        .contenuMarchandising{
+            width: 80%;
+        }
+     }
+ }
+
+
+ @media screen and (max-width: 1350px) {
+    
+ }

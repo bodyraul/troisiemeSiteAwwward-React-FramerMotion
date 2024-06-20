@@ -1,0 +1,174 @@
+@import url("../../_font.scss");
+.allContainerMarchansising {
+  height: 300vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+}
+.allContainerMarchansising .contenuMarchandising {
+  position: sticky;
+  top: 0%;
+  height: 100vh;
+  width: 70%;
+  max-width: 1800px;
+}
+.allContainerMarchansising .contenuMarchandising .topVide {
+  height: 145px;
+  width: 100%;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg {
+  height: calc(100% - 145px);
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  border-radius: 70px;
+  width: 42%;
+  min-width: 500px;
+  background-color: #212121;
+  height: calc(100% - 30px);
+  overflow: hidden;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising .titreMarchandising {
+  color: #FBFBFB;
+  font-size: 50px;
+  font-family: Montreal-Bold;
+  text-align: start;
+  width: 100%;
+  padding: 50px 0 0 50px;
+  transition: all 0.3s linear;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising .descriptionMerchandising {
+  color: #747474;
+  line-height: 28px;
+  font-family: Montreal-Bold;
+  font-size: 20px;
+  text-align: start;
+  width: 100%;
+  padding: 10px 0 0 50px;
+  transition: all 0.3s linear;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising #pCache1 {
+  z-index: 1;
+  background-color: #212121;
+  bottom: calc(0% + 18px);
+  transition: all 0.3s linear;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising #pCache2 {
+  z-index: 2;
+  background-color: #212121;
+  bottom: calc(0% - 50px);
+  transition: all 0.3s linear;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising #pCache3 {
+  bottom: calc(0% - 118px);
+  z-index: 3;
+  background-color: #212121;
+  transition: all 0.3s linear;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising .pCache {
+  height: 240px;
+  width: calc(100% - 100px);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising .pCache .affichageCache {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  height: 24%;
+  background-color: #292929;
+  color: #FBFBFB;
+  font-family: Montreal-Bold;
+  font-size: 25px;
+  padding: 20px 0 20px 10px;
+  border-radius: 15px;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising .pCache .affichageCache img {
+  width: 40px;
+  height: 40px;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising .pCache .affichageCache p {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising .pCache .contenuCache {
+  height: 70%;
+  transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising .pCache .contenuCache .titreCache {
+  color: #FBFBFB;
+  font-family: Montreal-Bold;
+  font-size: 33px;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .fashionMarchandising .pCache .contenuCache .texteCache {
+  color: #747474;
+  font-family: Montreal-Bold;
+  font-size: 20px;
+  line-height: 28px;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .imgMarchandising {
+  width: 56%;
+  background-color: yellow;
+  height: calc(100% - 30px);
+  background-color: #FBFBFB;
+  border-radius: 70px;
+  position: relative;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .imgMarchandising img {
+  width: 85%;
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  top: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 40px;
+  transition: all 0.3s linear;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .imgMarchandising #img1 {
+  z-index: 5;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .imgMarchandising #img2 {
+  z-index: 4;
+  opacity: 0;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .imgMarchandising #img3 {
+  z-index: 3;
+  opacity: 0;
+}
+.allContainerMarchansising .contenuMarchandising .MarchandisingPlusImg .imgMarchandising #img4 {
+  z-index: 2;
+  opacity: 0;
+}
+.allContainerMarchansising .target {
+  position: absolute;
+  height: 200vh;
+  width: 20px;
+  top: 100vh;
+}
+
+@media screen and (max-width: 1740px) {
+  .allContainerMarchansising .contenuMarchandising {
+    width: 80%;
+  }
+}/*# sourceMappingURL=Merchandising.css.map */

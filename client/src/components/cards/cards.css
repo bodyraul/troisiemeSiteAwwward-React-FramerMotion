@@ -1,0 +1,136 @@
+@import url("../../_font.scss");
+.englobeCardTitre {
+  height: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.englobeCardTitre .titre {
+  position: sticky;
+  top: 25%;
+  color: #181818;
+  font-family: Montreal-Bold;
+  font-size: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 100px;
+  transition: all 0.1s linear;
+}
+.englobeCardTitre .allcards {
+  width: 1320px;
+  height: 500px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.englobeCardTitre .allcards #card1 {
+  background-color: #212121;
+  left: 0%;
+  transition: all 0.5s linear;
+}
+.englobeCardTitre .allcards #card2 {
+  background-color: #2B2B2B;
+  left: 33.3%;
+  transition: all 0.5s linear;
+}
+.englobeCardTitre .allcards #card3 {
+  background-color: #363636;
+  left: 66.6%;
+  transition: all 0.5s linear;
+}
+.englobeCardTitre .allcards .uniteCard {
+  position: absolute;
+  width: 420px;
+  height: 450px;
+  margin: 10px;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.englobeCardTitre .allcards .uniteCard .imgCard {
+  width: 80px;
+  height: 80px;
+}
+.englobeCardTitre .allcards .uniteCard .p1Card {
+  font-size: 60px;
+  font-family: Montreal-Bold;
+  margin: 23px 0 23px 0;
+  line-height: 60px;
+  color: #FBFBFB;
+}
+.englobeCardTitre .allcards .uniteCard .p2Card {
+  color: #333;
+  font-size: 21px;
+  font-family: Montreal-Bold;
+  padding: 0 10px 0 10px;
+  color: #FBFBFB;
+}
+
+@media screen and (max-width: 1350px) {
+  .englobeCardTitre {
+    height: 2000px;
+    margin-top: 200px;
+  }
+  .englobeCardTitre .titre {
+    height: 350px;
+    position: initial;
+    margin-bottom: 0px;
+  }
+  .englobeCardTitre .allcards {
+    height: 1650px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .englobeCardTitre .allcards #card1 {
+    transform: translate3d(0px, 0px, 0px) rotateZ(10deg);
+    left: auto;
+  }
+  .englobeCardTitre .allcards #card2 {
+    transform: translate3d(0px, 0px, 0px) rotateZ(10deg);
+    left: auto;
+  }
+  .englobeCardTitre .allcards #card3 {
+    transform: translate3d(0px, 0px, 0px) rotateZ(10deg);
+    left: auto;
+  }
+  .englobeCardTitre .allcards .uniteCard {
+    position: relative;
+  }
+}
+@media screen and (max-width: 750px) {
+  .englobeCardTitre .titre {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 625px) {
+  .englobeCardTitre .allcards .uniteCard {
+    width: 350px;
+  }
+  .englobeCardTitre .allcards .uniteCard .p1Card {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .englobeCardTitre .allcards .uniteCard .p2Card {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 405px) {
+  .englobeCardTitre .allcards .uniteCard {
+    width: 300px;
+  }
+  .englobeCardTitre .allcards .uniteCard .p1Card {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .englobeCardTitre .allcards .uniteCard .p2Card {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=cards.css.map */

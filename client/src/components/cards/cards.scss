@@ -1,0 +1,149 @@
+
+@import '../../variable';
+@import url('../../_font.scss');
+
+.englobeCardTitre{
+    height: 1200px;
+    width: 100%;
+    @include display(column,center,center);
+    position: relative;
+    .titre{
+        position: sticky;
+        top: 25%;
+        color: $noir;
+        font-family: Montreal-Bold;
+        font-size: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-bottom: 100px;
+        transition: all 0.1s  linear;
+
+    }
+    .allcards{
+        width: 1320px;
+        height: 500px;
+        margin-bottom: 10px;
+        position: relative;
+   
+        #card1{
+            background-color: $bgColorCard1;
+            left: 0%;
+            transition: all 0.5s linear;
+
+        }
+        #card2{
+            background-color: $bgColorCard2;
+            left: 33.3%;
+            transition: all 0.5s linear;
+        }
+        #card3{
+            background-color: $bgColorCard3;
+            left: 66.6%;
+            transition: all 0.5s linear;
+        }
+        .uniteCard{
+            position: absolute;
+            width: 420px;
+            height: 450px;
+            margin: 10px;
+            border-radius: 50px;
+            text-align: center;
+            @include display(column,center,center);
+            .imgCard{
+                width: 80px;
+                height: 80px;
+            }
+            .p1Card{
+               
+                font-size: 60px;
+                font-family: Montreal-Bold;
+                margin: 23px 0 23px 0; 
+                line-height: 60px;
+                color: $blanc;
+            }
+            .p2Card{
+                color: $grisTexte2;
+                font-size: 21px;
+                font-family: Montreal-Bold;
+                padding: 0 10px 0 10px;
+                color: $blanc;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1350px) {
+    .englobeCardTitre{
+        height: 2000px;
+        margin-top: 200px;
+        .titre{
+           height: 350px;
+           position: initial;
+           margin-bottom: 0px;
+        }
+        .allcards{
+            height: 1650px;
+            position: relative;
+            @include display(column,center,space-between);
+            #card1{
+                transform: translate3d(0px,0px,0px) rotateZ(10deg);
+                left: auto;
+            }
+            #card2{
+                transform: translate3d(0px,0px,0px) rotateZ(10deg);
+                left: auto;
+            }
+            #card3{
+                transform: translate3d(0px,0px,0px) rotateZ(10deg);
+                left: auto;
+            }
+            .uniteCard{
+                position: relative;
+            }
+        }
+    }
+   }
+
+@media screen and (max-width: 750px) {
+   .englobeCardTitre{
+    .titre{
+        font-size: 25px;
+    }
+   }
+  }
+
+  @media screen and (max-width: 625px) {
+    .englobeCardTitre{
+        .allcards{
+            .uniteCard{
+                width: 350px;
+                .p1Card{
+                    font-size: 50px;
+                    line-height: 50px;
+                }
+                .p2Card{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+   }
+
+   @media screen and (max-width: 405px) {
+    .englobeCardTitre{
+        .allcards{
+            .uniteCard{
+                width: 300px;
+                .p1Card{
+                    font-size: 50px;
+                    line-height: 50px;
+                }
+                .p2Card{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+   }
+

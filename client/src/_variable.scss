@@ -1,0 +1,24 @@
+$blanc : #FBFBFB;
+$moyenGris : #E7E7E7;
+$gris : #F3F3F3;
+$grisParaCache:#292929;
+$grisPlusGris : #D3D3D3;
+$grisTexte : #787878;
+$grisTexte2 : #333;
+$bgcolorGrisClair : #BFBFBF;
+$bgcolorGrisFoncer : #5E5E5E;
+$bgColorCard1 : #212121;
+$bgColorCard2 : #2B2B2B;
+$bgColorCard3 : #363636;
+$noir : #181818;
+$orange : #FF5314;
+
+
+
+@mixin display($flexDirection,$alignItem,$JustifiContent){
+    display: flex;
+    flex-direction: $flexDirection;
+    align-items: $alignItem;
+    justify-content: $JustifiContent;
+    
+}
