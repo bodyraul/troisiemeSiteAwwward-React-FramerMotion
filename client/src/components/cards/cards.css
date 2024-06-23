@@ -28,17 +28,17 @@
 .englobeCardTitre .allcards #card1 {
   background-color: #212121;
   left: 0%;
-  transition: all 0.5s linear;
+  transition: transform 0.5s linear;
 }
 .englobeCardTitre .allcards #card2 {
   background-color: #2B2B2B;
   left: 33.3%;
-  transition: all 0.5s linear;
+  transition: transform 0.5s linear;
 }
 .englobeCardTitre .allcards #card3 {
   background-color: #363636;
   left: 66.6%;
-  transition: all 0.5s linear;
+  transition: transform 0.5s linear;
 }
 .englobeCardTitre .allcards .uniteCard {
   position: absolute;
@@ -73,7 +73,7 @@
 
 @media screen and (max-width: 1350px) {
   .englobeCardTitre {
-    height: 2000px;
+    height: 1800px;
     margin-top: 200px;
   }
   .englobeCardTitre .titre {
@@ -82,7 +82,7 @@
     margin-bottom: 0px;
   }
   .englobeCardTitre .allcards {
-    height: 1650px;
+    height: 1450px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@
     left: auto;
   }
   .englobeCardTitre .allcards #card2 {
-    transform: translate3d(0px, 0px, 0px) rotateZ(10deg);
+    transform: translate3d(0px, 0px, 0px) rotateZ(-10deg);
     left: auto;
   }
   .englobeCardTitre .allcards #card3 {
@@ -103,6 +103,7 @@
   }
   .englobeCardTitre .allcards .uniteCard {
     position: relative;
+    width: 80vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -111,9 +112,6 @@
   }
 }
 @media screen and (max-width: 625px) {
-  .englobeCardTitre .allcards .uniteCard {
-    width: 350px;
-  }
   .englobeCardTitre .allcards .uniteCard .p1Card {
     font-size: 50px;
     line-height: 50px;

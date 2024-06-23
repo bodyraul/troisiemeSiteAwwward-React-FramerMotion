@@ -28,18 +28,18 @@
         #card1{
             background-color: $bgColorCard1;
             left: 0%;
-            transition: all 0.5s linear;
+            transition: transform 0.5s linear;
 
         }
         #card2{
             background-color: $bgColorCard2;
             left: 33.3%;
-            transition: all 0.5s linear;
+            transition: transform 0.5s linear;
         }
         #card3{
             background-color: $bgColorCard3;
             left: 66.6%;
-            transition: all 0.5s linear;
+            transition: transform 0.5s linear;
         }
         .uniteCard{
             position: absolute;
@@ -75,7 +75,7 @@
 
 @media screen and (max-width: 1350px) {
     .englobeCardTitre{
-        height: 2000px;
+        height: 1800px;
         margin-top: 200px;
         .titre{
            height: 350px;
@@ -83,7 +83,7 @@
            margin-bottom: 0px;
         }
         .allcards{
-            height: 1650px;
+            height: 1450px;
             position: relative;
             @include display(column,center,space-between);
             #card1{
@@ -91,7 +91,7 @@
                 left: auto;
             }
             #card2{
-                transform: translate3d(0px,0px,0px) rotateZ(10deg);
+                transform: translate3d(0px,0px,0px) rotateZ(-10deg);
                 left: auto;
             }
             #card3{
@@ -100,6 +100,7 @@
             }
             .uniteCard{
                 position: relative;
+                width: 80vw;
             }
         }
     }
@@ -117,7 +118,6 @@
     .englobeCardTitre{
         .allcards{
             .uniteCard{
-                width: 350px;
                 .p1Card{
                     font-size: 50px;
                     line-height: 50px;
