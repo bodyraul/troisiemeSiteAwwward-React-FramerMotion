@@ -10,7 +10,7 @@ import { useState } from 'react'
 import { useRef } from 'react'
 import { useEffect } from 'react'
 import { Fragment } from 'react'
-
+import ResponsiveCards from '../../components/respondiveCards/ResponsiveCards'
 
 export default function PageAccueil() {
 
@@ -24,6 +24,22 @@ export default function PageAccueil() {
     };
   }, [color])
 
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 1350px)").matches
+  )
+
+  useEffect(() => {
+    function eventResponsive(e){
+      setMatches( e.matches );
+    }
+
+    window.matchMedia("(max-width: 1350px)").addEventListener('change', eventResponsive);
+  
+    return () => {
+      window.matchMedia("(max-width: 1350px)").removeEventListener('change', eventResponsive);
+    }
+  }, [])
+
   return (
     <>
     <Navbar></Navbar>
@@ -33,7 +49,7 @@ export default function PageAccueil() {
         <DefilementBar></DefilementBar>
       </div>
       <div className='partieCard'>
-          <Cards  setcolor={setcolor}></Cards>
+          {!matches? <Cards  setcolor={setcolor}></Cards> : <ResponsiveCards setcolor={setcolor}></ResponsiveCards>}
       </div>
       <Merchandising  setcolor={setcolor}></Merchandising>
       <DefilementPersonnel setcolor={setcolor}></DefilementPersonnel>

@@ -146,12 +146,12 @@ body {
   position: absolute;
   width: 12%;
   transform: scale(2) translateX(45.5%) translateY(-44%) rotateX(6deg) rotateY(-16deg);
-  transition: all 0.1s linear;
+  transition: all 0.2s linear;
 }
 .blocPhotoVisual .photoPlusVisual .blocPhotoDeVisual .bigphoto {
   width: 90%;
   transform: rotateX(6deg) rotateY(-16deg);
-  transition: all 0.1s linear;
+  transition: all 0.2s linear;
 }
 
 @media screen and (max-width: 1740px) {
