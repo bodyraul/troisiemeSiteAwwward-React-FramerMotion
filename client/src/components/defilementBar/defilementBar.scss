@@ -69,7 +69,7 @@
 
 
 .animAllBar{
-    animation: animbare 90s linear  infinite;
+    @include compatibilite(animbare 90s linear  infinite);
 }
 
 @keyframes animbare {
@@ -78,7 +78,7 @@
 }
 
 .animAllBarResponsive{
-    animation: animbareResponsive 90s linear  infinite;
+    @include compatibilite(animbareResponsive 90s linear  infinite);
 }
 
 @keyframes animbareResponsive {

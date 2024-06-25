@@ -85,7 +85,7 @@ export default function Merchandising({setcolor}) {
                   <motion.p style={{opacity:opacityParaBase,transform:scaleParaBase}}  className="descriptionMerchandising">Depict lets you manage your<br></br> collection pages like a professional.</motion.p>
                   <motion.div style={{bottom:bottomParaUn}} id='pCache1' className="pCache">
                       <p className="affichageCache">
-                        <img src={pointImg} alt="" />
+                        <img src={pointImg} alt="Représentation de six points oranges." />
                         <p>Editorial Merchandising</p>
                       </p>
                       <motion.div style={{opacity:opacityParaUn,transform:scaleParaUn}} className="contenuCache">
@@ -100,7 +100,7 @@ export default function Merchandising({setcolor}) {
                   </motion.div>
                   <motion.div style={{bottom:bottomParaDeux}} id='pCache2' className="pCache">
                       <p className="affichageCache">
-                        <img src={triangleImg} alt="" />
+                        <img src={triangleImg} alt="Représentation d'un triangle orange pointant vers le bas et d'un triangle orange pointant vers le haut." />
                         <p>Strategic Merchandising</p>
                       </p>
                       <motion.div style={{opacity:opacityParaDeux,transform:scaleParaDeux}} className="contenuCache">
@@ -115,7 +115,7 @@ export default function Merchandising({setcolor}) {
                   </motion.div>
                   <motion.div style={{bottom:bottomParaTrois}} id='pCache3' className="pCache">
                       <p className="affichageCache">
-                        <img src={statImg} alt="" />
+                        <img src={statImg} alt="Représentation de trois barres verticales oranges." />
                         <p>Analytics</p>
                       </p>
                       <motion.div style={{opacity:opacityParaTrois}} className="contenuCache">
@@ -130,10 +130,10 @@ export default function Merchandising({setcolor}) {
                   </motion.div>
               </div>
               <motion.div className="imgMarchandising">
-                    <motion.img style={{opacity:opacityImgUne}} id='img1' src={imgUne} alt="" />
-                    <motion.img style={{opacity:opacityImgDeux}} id='img2' src={imgdeux} alt="" />
-                    <motion.img  style={{opacity:opacityImgTrois}} id='img3' src={imgTrois} alt="" />
-                    <motion.img style={{opacity:opacityImgQuatre}} id='img4' src={imgQuatre} alt="" />
+                    <motion.img style={{opacity:opacityImgUne}} id='img1' src={imgUne} alt="Représentation d'un homme." />
+                    <motion.img style={{opacity:opacityImgDeux}} id='img2' src={imgdeux} alt="Représentation de huight personnes." />
+                    <motion.img  style={{opacity:opacityImgTrois}} id='img3' src={imgTrois} alt="Représentation de huight personnes." />
+                    <motion.img style={{opacity:opacityImgQuatre}} id='img4' src={imgQuatre} alt="Représentation de plusieurs statistiques." />
               </motion.div>
             </div>
         </div>

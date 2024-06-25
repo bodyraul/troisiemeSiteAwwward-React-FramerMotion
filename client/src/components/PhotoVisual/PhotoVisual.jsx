@@ -123,7 +123,7 @@ useEffect(() => {
         <div className='photoPlusVisual'>
             <div ref={paraVisual} className='blocVisual'>
               <p ref={paraUn} className='blocVisualP1'>
-                 <img src={imgDollard} alt="" />
+                 <img src={imgDollard} alt="Représentation du symbole dollars." />
                  <span>Made for shopify</span>
               </p>
               <p ref={paraDeux} className='blocVisualP2'>
@@ -143,8 +143,8 @@ useEffect(() => {
               </div>
             </div>
             <div ref={paraPhotoVisual} className='blocPhotoDeVisual'>
-              {matches && ( <img ref={imgRotate}  className='bigphoto' src={bigPhotoDeux} alt="" />)}
-              {!matches && ( <img ref={imgRotate} onMouseMove={imgMoove} onMouseLeave={imgPositionBase} className='bigphoto' src={bigPhoto} alt="" />)}
+              {matches && ( <img ref={imgRotate}  className='bigphoto' src={bigPhotoDeux} alt="Représenation de huight personnes." />)}
+              {!matches && ( <img ref={imgRotate} onMouseMove={imgMoove} onMouseLeave={imgPositionBase} className='bigphoto' src={bigPhoto} alt="Représenation de huight personnes." />)}
               <img ref={imgRotateDeux} style={matches ? {opacity:0} : {opacity:1}} src={imgSolo} id='imgSolo'  alt="" />
             </div>
         </div>

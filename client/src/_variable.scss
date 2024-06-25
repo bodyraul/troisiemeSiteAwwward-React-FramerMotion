@@ -22,3 +22,11 @@ $orange : #FF5314;
     justify-content: $JustifiContent;
     
 }
+
+@mixin compatibilite($contenu){
+    -webkit-animation: $contenu;
+    -moz-animation: $contenu;
+     -ms-animation: $contenu;
+      -o-animation: $contenu;
+         animation: $contenu;
+}

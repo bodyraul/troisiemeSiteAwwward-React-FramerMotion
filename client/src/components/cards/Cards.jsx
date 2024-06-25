@@ -65,17 +65,17 @@ export default function Cards({setcolor}) {
       <motion.div style={{color:ColorTitre,opacity:opacityTitre}}  className='titre'>Collections are your most <br></br>important pages, but are <br></br>frustrating to manage</motion.div>
       <div  className="allcards">
          <motion.div  style={ {transform:rotationCardUne}} id='card1' className="uniteCard">
-            <img className='imgCard' src={imgDoight} alt="" />
+            <img className='imgCard' src={imgDoight} alt="Representation d'une main orange avec l'index levé." />
             <p className='p1Card'>Non-Visual<br></br>Curation</p>
             <p style={{opacity:"0.3"}} className='p2Card'>Manually curating your collections<br></br>feels like doing your taxes.</p>
          </motion.div>
          <motion.div style={ {transform:rotationCardDeux}}  ref={cardDeux} id='card2'  className="uniteCard">
-            <img  className='imgCard' src={imgFleche} alt="" />
+            <img  className='imgCard' src={imgFleche} alt="Representation d'une flêche orange pointant vers le haut et d'une flêche orange pointant vers le bas." />
             <p  className='p1Card'>Limited<br></br>Sorting</p>
             <p style={{opacity:"0.6"}} className='p2Card'>It's too basic to sort your collections <br></br>by "New in" or "Best Sellers".</p>
          </motion.div>
          <motion.div  style={{transform:rotationCardTrois}} id='card3'  className="uniteCard">
-            <img className='imgCard' src={carrer} alt="" />
+            <img className='imgCard' src={carrer} alt="Representation de deux containers oranges suppersposés. " />
             <p className='p1Card'>Messy<br></br>Data</p>
             <p style={{opacity:"0.7"}} className='p2Card'>You need 5 tabs open to take data-<br></br>driven decisions from excell sheets.</p>
          </motion.div>

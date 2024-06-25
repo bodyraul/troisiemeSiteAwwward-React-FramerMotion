@@ -43,17 +43,17 @@ export default function ResponsiveCards({setcolor}) {
     <motion.div style={{color:ColorTitre,opacity:opacityTitre}}  className='titreResponsive'>Collections are your most <br></br>important pages, but are <br></br>frustrating to manage</motion.div>
     <div  className="allcardsResponsive">
        <motion.div  style={ {transform:rotationCardUneResponsive}}   id='card1Responsive' className="uniteCardResponsive">
-          <img className='imgCardResponsive' src={imgDoight} alt="" />
+          <img className='imgCardResponsive' src={imgDoight} alt="Représentation d'une main orange avec l'index levé." />
           <p className='p1CardResponsive'>Non-Visual<br></br>Curation</p>
           <p style={{opacity:"0.3"}} className='p2CardResponsive'>Manually curating your collections<br></br>feels like doing your taxes.</p>
        </motion.div>
        <motion.div  style={ {transform:rotationCardDeuxResponsive}}    id='card2Responsive'  className="uniteCardResponsive">
-          <img  className='imgCardResponsive' src={imgFleche} alt="" />
+          <img  className='imgCardResponsive' src={imgFleche} alt="Représentation d'une flêche orange pointant vers le haut et d'une flêche orange pointant vers le bas." />
           <p  className='p1CardResponsive'>Limited<br></br>Sorting</p>
           <p style={{opacity:"0.6"}} className='p2CardResponsive'>It's too basic to sort your collections <br></br>by "New in" or "Best Sellers".</p>
        </motion.div>
        <motion.div  style={ {transform:rotationCardTroisResponsive}}   id='card3Responsive'  className="uniteCardResponsive">
-          <img className='imgCardResponsive' src={carrer} alt="" />
+          <img className='imgCardResponsive' src={carrer} alt="Représentation de deux container qui se superposent." />
           <p className='p1CardResponsive'>Messy<br></br>Data</p>
           <p style={{opacity:"0.7"}} className='p2CardResponsive'>You need 5 tabs open to take data-<br></br>driven decisions from excell sheets.</p>
        </motion.div>

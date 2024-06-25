@@ -70,7 +70,7 @@ export default function DefilementPersonnel({setcolor}) {
                 <motion.div style={{transform:defilementParaUn,opacity:opacityParaUn}} className='ElementPersonnelUn'>
                     <motion.div style={{transform:transformContainerUn,transition: "all 0.1s  linear"}} className='partieUne'>		
                         <div className='partieUneImg'>
-                            <img src={imgQuotation} alt="" />
+                            <img src={imgQuotation} alt="représentation de deux symboles quotation." />
                         </div>
                         <div  className='partieUneDescription'>
                             <span>Awork(life)saving app.</span><br></br><span>We saved 40% of our</span><br></br><span>time merchandising</span><br></br><span>every month.</span>
@@ -79,10 +79,10 @@ export default function DefilementPersonnel({setcolor}) {
                     <div className='partieDeux'>
                         <div className='partiePhotoTitre'>
                             <motion.div style={{transform:transformImgUne,transition: "all 0.1s  linear"}} className='partiePhotoPersonnel'>
-                                    <img  src={imgAnnie} alt="" />   
+                                    <img  src={imgAnnie} alt="représentation d'une femme." />   
                             </motion.div>
                             <motion.div style={{transform:transformImgDeux,transition: "all 0.1s  linear"}} className='partieTitrePersonnel'>
-                                <img src={imgStronger} alt="" />
+                                <img src={imgStronger} alt="représentation du mot stronger." />
                             </motion.div>
                         </div>
                         <motion.div style={{transform:transformContainerDeux,transition: "all 0.1s  linear"}}className='partiePersonnelNom'>
@@ -93,7 +93,7 @@ export default function DefilementPersonnel({setcolor}) {
                 <motion.div style={{transform:defilementParaDeux,opacity:opacityParaDeux}} className='ElementPersonnelDeux'>
                     <div className='partieUne'>		
                         <div className='partieUneImg'>
-                            <img src={imgQuotation}alt="" />
+                            <img src={imgQuotation}alt="représentation de deux symboles quotation." />
                         </div>
                         <div  className='partieUneDescription'>
                             <span>Time-effective visual</span><br></br><span>merchandising, Depict is</span><br></br><span>super user-friendly and</span><br></br><span>smart.</span>
@@ -102,10 +102,10 @@ export default function DefilementPersonnel({setcolor}) {
                     <div className='partieDeux'>
                         <div className='partiePhotoTitre'>
                             <div  className='partiePhotoPersonnel'>
-                                    <img  src={imgElysa} alt="" />   
+                                    <img  src={imgElysa} alt="représentation d'une femme." />   
                             </div>
                             <div className='partieTitrePersonnel'>
-                                <img src={imgEytis} alt="" />
+                                <img src={imgEytis} alt="représentation d'une femme." />
                             </div>
                         </div>
                         <div className='partiePersonnelNom'>
@@ -116,7 +116,7 @@ export default function DefilementPersonnel({setcolor}) {
                 <motion.div style={{transform:defilementParaTrois,opacity:opacityParaTrois}} className='ElementPersonnelTrois'>
                     <div className='partieUne'>		
                         <div className='partieUneImg'>
-                            <img src={imgQuotation} alt="" />
+                            <img src={imgQuotation} alt="représentation de deux symboles quotation." />
                         </div>
                         <div  className='partieUneDescription'>
                             <span>Depict has</span><br></br><span>revolutionized our</span><br></br><span>workflow with AI</span><br></br><span>capabilities to enhance</span><br></br><span>our operations.</span>
@@ -125,10 +125,10 @@ export default function DefilementPersonnel({setcolor}) {
                     <div className='partieDeux'>
                         <div className='partiePhotoTitre'>
                             <div  className='partiePhotoPersonnel'>
-                                    <img  src={imgCassandra}  alt="" />   
+                                    <img  src={imgCassandra}  alt="représentation d'une femme." />   
                             </div>
                             <div className='partieTitrePersonnel'>
-                                <img src={imgUnderstatement} alt="" />
+                                <img src={imgUnderstatement} alt="représentation du mot understatement." />
                             </div>
                         </div>
                         <div className='partiePersonnelNom'>

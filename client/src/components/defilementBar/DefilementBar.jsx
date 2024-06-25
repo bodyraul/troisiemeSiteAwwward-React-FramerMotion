@@ -37,28 +37,28 @@ export default function DefilementBar() {
           <p className='defilementBarTitre'>Trusted by</p>
           {matches && (<div ref={refBar} className='allBar animAllBarResponsive'>
             <p className='imgDefilement'>
-                <img src={aplace} alt="" />
-                <img src={stuternhim} alt="" />
-                <img src={chimie} alt="" />
-                <img src={sandqvist} alt="" />
-                <img src={hope} alt="" />
-                <img src={kotn} alt="" />
+                <img src={aplace} alt="représentation d'un mot avec écrit APLACE. " />
+                <img src={stuternhim} alt="représentation d'un mot avec écrit STUTTERHEIM RAINCOATS." />
+                <img src={chimie} alt="représentation d'un mot avec écrit CHIMI." />
+                <img src={sandqvist} alt="représentation d'un mot avec écrit SANDVIST." />
+                <img src={hope} alt="représentation d'un mot avec écrit HOPE." />
+                <img src={kotn} alt="représentation d'un mot avec écrit KOTN." />
               </p>
               <p className='imgDefilement'>
-                <img src={aplace} alt="" />
-                <img src={stuternhim} alt="" />
-                <img src={chimie} alt="" />
-                <img src={sandqvist} alt="" />
-                <img src={hope} alt="" />
-                <img src={kotn} alt="" />
+                <img src={aplace} alt="représentation d'un mot avec écrit APLACE." />
+                <img src={stuternhim} alt="représentation d'un mot avec écrit STUTTERHEIM RAINCOATS." />
+                <img src={chimie} alt="représentation d'un mot avec écrit CHIMI." />
+                <img src={sandqvist} alt="représentation d'un mot avec écrit SANDVIST." />
+                <img src={hope} alt="représentation d'un mot avec écrit HOPE." />
+                <img src={kotn} alt="représentation d'un mot avec écrit KOTN." />
               </p>
               <p className='imgDefilement'>
-                <img src={aplace} alt="" />
-                <img src={stuternhim} alt="" />
-                <img src={chimie} alt="" />
-                <img src={sandqvist} alt="" />
-                <img src={hope} alt="" />
-                <img src={kotn} alt="" />
+                <img src={aplace} alt="représentation d'un mot avec écrit APLACE." />
+                <img src={stuternhim} alt="représentation d'un mot avec écrit STUTTERHEIM RAINCOATS." />
+                <img src={chimie} alt="représentation d'un mot avec écrit CHIMI." />
+                <img src={sandqvist} alt="représentation d'un mot avec écrit SANDVIST." />
+                <img src={hope} alt="représentation d'un mot avec écrit HOPE." />
+                <img src={kotn} alt="représentation d'un mot avec écrit KOTN." />
               </p>
           </div>)
           }
