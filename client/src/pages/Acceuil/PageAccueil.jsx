@@ -9,7 +9,6 @@ import DefilementPersonnel from '../../components/defilementPersonnel/defilement
 import { useState } from 'react'
 import { useRef } from 'react'
 import { useEffect } from 'react'
-import { Fragment } from 'react'
 import ResponsiveCards from '../../components/respondiveCards/ResponsiveCards'
 
 export default function PageAccueil() {

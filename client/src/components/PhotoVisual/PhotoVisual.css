@@ -1,103 +1,8 @@
-@import url("../../_font.scss");
 body {
   background-color: #F3F3F3;
 }
 
-.blocPhotoVisual {
-  width: 100%;
-  height: 87%;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.blocPhotoVisual .photoPlusVisual {
-  height: 100%;
-  width: 70%;
-  max-width: 1800px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.blocPhotoVisual .photoPlusVisual .blocVisual {
-  transform: translateY(10%);
-  transition: transform 0.5s ease-out, opacity 0.2s ease-out;
-  opacity: 0;
-  height: 100%;
-  width: 49%;
-  background-color: #FBFBFB;
-  border-radius: 50px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-}
-.blocPhotoVisual .photoPlusVisual .blocVisual .blocVisualP1 {
-  transform: translateY(40%);
-  transition: transform 0.6s ease-out;
-  margin: 0 50px;
-  width: 170px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  padding: 10px;
-  background-color: #E7E7E7;
-  border-radius: 10px;
-  font-family: Montreal-Regular;
-  font-size: 16px;
-}
-.blocPhotoVisual .photoPlusVisual .blocVisual .blocVisualP2 {
-  transform: translateY(15%);
-  transition: transform 0.6s ease-out;
-  margin: 50px 50px 50px 50px;
-  font-family: Montreal-Bold;
-  font-size: 75px;
-  line-height: 75px;
-  letter-spacing: 3px;
-}
-.blocPhotoVisual .photoPlusVisual .blocVisual .blocVisualP3 {
-  transform: translateY(100%);
-  transition: transform 0.6s ease-out;
-  margin: 0 50px 50px 50px;
-  color: #787878;
-  font-family: Montreal-Medium;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 20px;
-}
-.blocPhotoVisual .photoPlusVisual .blocVisual .blocVisualP3 span {
-  line-height: 25px;
-}
-.blocPhotoVisual .photoPlusVisual .blocVisual .btnOrange {
-  transform: translateY(55%);
-  transition: transform 0.6s ease-out;
-  background-color: #FF5314;
-  border: solid red 1px;
-  width: 150px;
-  height: 100px;
-  margin-left: 50px;
-  font-family: Montreal-Medium;
-  font-size: 17px;
-  border-radius: 30px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.blocPhotoVisual .photoPlusVisual .blocVisual .btnOrange:hover {
-  cursor: pointer;
-}
-.blocPhotoVisual .photoPlusVisual .blocVisual .btnOrange .pBtnorange {
-  width: 100%;
-  height: 50%;
-  position: relative;
-  overflow: hidden;
-}
-.blocPhotoVisual .photoPlusVisual .blocVisual .btnOrange .pBtnorange .visibleSpan {
+.visibleSpan {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -107,7 +12,8 @@ body {
   height: 100%;
   transition: 0.1s 0.1s all;
 }
-.blocPhotoVisual .photoPlusVisual .blocVisual .btnOrange .pBtnorange .invisibleSpan {
+
+.invisibleSpan {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -118,122 +24,13 @@ body {
   transition: 0.1s all;
   transform: translateY(35px);
 }
-.blocPhotoVisual .photoPlusVisual .blocVisual .btnOrange .pBtnorange .invisibleSpan.upSpan {
+
+.invisibleSpan.upSpan {
   transform: translateY(0px);
   transition: 0.1s 0.1s all;
 }
-.blocPhotoVisual .photoPlusVisual .blocVisual .btnOrange .pBtnorange .visibleSpan.upSpan {
+
+.visibleSpan.upSpan {
   transform: translateY(-35px);
   transition: 0.1s all;
 }
-.blocPhotoVisual .photoPlusVisual .blocPhotoDeVisual {
-  transform: translateY(10%);
-  transition: transform 0.5s 0.4s ease-out, opacity 0.2s 0.4s ease-out;
-  opacity: 0;
-  height: 100%;
-  width: 49%;
-  background-color: #FBFBFB;
-  border-radius: 50px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  perspective: 1500px;
-}
-.blocPhotoVisual .photoPlusVisual .blocPhotoDeVisual #imgSolo {
-  position: absolute;
-  width: 12%;
-  transform: scale(2) translateX(45.5%) translateY(-44%) rotateX(6deg) rotateY(-16deg);
-  transition: all 0.2s linear;
-}
-.blocPhotoVisual .photoPlusVisual .blocPhotoDeVisual .bigphoto {
-  width: 90%;
-  transform: rotateX(6deg) rotateY(-16deg);
-  transition: all 0.2s linear;
-}
-
-@media screen and (max-width: 1740px) {
-  .blocPhotoVisual {
-    height: 800px;
-  }
-  .blocPhotoVisual .photoPlusVisual {
-    width: 80%;
-  }
-  .blocPhotoVisual .photoPlusVisual .blocVisual .blocVisualP2 {
-    font-size: 60px;
-    line-height: 65px;
-  }
-  .blocPhotoVisual .photoPlusVisual .blocPhotoDeVisual .bigphoto {
-    width: 97%;
-  }
-}
-@media screen and (max-width: 1285px) {
-  .blocPhotoVisual .photoPlusVisual .blocVisual .blocVisualP2 {
-    font-size: 45px;
-    line-height: 50px;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .blocPhotoVisual {
-    height: auto;
-    margin-bottom: 0px;
-  }
-  .blocPhotoVisual .photoPlusVisual {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .blocPhotoVisual .photoPlusVisual .blocVisual {
-    height: 600px;
-    width: 100%;
-    margin-bottom: 17px;
-  }
-  .blocPhotoVisual .photoPlusVisual .blocVisual .blocVisualP2 {
-    font-size: 75px;
-    line-height: 75px;
-  }
-  .blocPhotoVisual .photoPlusVisual .blocPhotoDeVisual {
-    height: auto;
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 17px;
-  }
-  .blocPhotoVisual .photoPlusVisual .blocPhotoDeVisual .bigphoto {
-    width: 80vw;
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  .blocPhotoVisual .photoPlusVisual .blocPhotoDeVisual #imgSolo {
-    width: 10%;
-    transform: scale(0) translateX(45.5%) translateY(-44%) rotateX(0deg) rotateY(0deg);
-  }
-}
-@media screen and (max-width: 680px) {
-  .blocPhotoVisual .photoPlusVisual .blocVisual .blocVisualP2 {
-    font-size: 45px;
-    line-height: 50px;
-  }
-  .blocPhotoVisual .photoPlusVisual .blocVisual .btnOrange {
-    width: 150px;
-    height: 60px;
-    border-radius: 15px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .blocPhotoVisual .photoPlusVisual .blocVisual .blocVisualP2 {
-    font-size: 33px;
-    line-height: 30px;
-  }
-  .blocPhotoVisual .photoPlusVisual .blocVisual .blocVisualP3 {
-    font-size: 17px;
-  }
-  .blocPhotoVisual .photoPlusVisual .blocVisual .blocVisualP3 span {
-    line-height: 20px;
-  }
-  .blocPhotoVisual .photoPlusVisual .blocPhotoDeVisual .bigphoto {
-    width: 97%;
-  }
-}/*# sourceMappingURL=PhotoVisual.css.map */

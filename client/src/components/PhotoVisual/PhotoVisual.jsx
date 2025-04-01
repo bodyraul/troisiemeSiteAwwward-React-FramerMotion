@@ -119,35 +119,36 @@ useEffect(() => {
 
 
   return (
-    <div className='blocPhotoVisual'>
-        <div className='photoPlusVisual'>
-            <div ref={paraVisual} className='blocVisual'>
-              <p ref={paraUn} className='blocVisualP1'>
-                 <img src={imgDollard} alt="Représentation du symbole dollars." />
-                 <span>Made for shopify</span>
-              </p>
-              <p ref={paraDeux} className='blocVisualP2'>
-                  <span>Visual</span><br></br>
-                  <span>Merchandising</span><br></br>
-                  <span>for Brands</span>
-              </p>
-              <p ref={paraTrois} className='blocVisualP3'>
-                  <span>Tailored to Fashion Brands</span><br></br>
-                  <span>One-Click Setups</span>
-              </p>
-              <div ref={paraBtn}  onMouseEnter={enterBtnOrange} onMouseLeave={leaveBtnOrange} className='btnOrange'>
-                  <div className='pBtnorange'>
-                    <p ref={textVisibleBtnOrange} className='visibleSpan'>10-Day Free Trial</p>
-                    <p ref={textInvisibleBtnOrange} className='invisibleSpan'>Start for free</p>
-                  </div>
+    <div className='supp1100:h-[800px] supp1740:h-[90vh]  h-auto mb-0 w-full flex flex-row items-center justify-center'>
+    <div className='supp1100:w-[80%] supp1100:flex-row  supp1740:w-[70%] h-full w-[90%] max-w-[1800px] flex flex-col items-center justify-between'>
+        <div style={{transition:`transform 0.5s ease-out,opacity 0.2s ease-out`,boxShadow:`rgba(0, 0, 0, 0.24) 0px 3px 8px`}} ref={paraVisual} className='supp1100:mb-0 supp1100:h-full supp1100:w-[49%] translate-y-[10%] opacity-0 h-[600px] w-[100%] bg-blanc rounded-[50px] flex flex-col items-start justify-center mb-4'>
+          <p ref={paraUn} className='translate-y-[40%] transition-transform duration-500 ease-out my-0 mx-12 w-[170px] flex flex-row items-center justify-around p-[10px] font-[Montreal-Regular] text-base'>
+             <img src={imgDollard} alt="Représentation du symbole dollars."/>
+             <span>Made for shopify</span>
+          </p>
+          <p ref={paraDeux} className='supp500:text-[45px] supp500:leading-[50px] supp680:text-[75px] supp680:leading-[75px] supp1100:text-[45px] supp1100:leading-[50px] supp1250:text-[60px] supp1250:leading-[65px] supp1740:text-[75px] supp1740:leading-[75px] translate-y-[15%] transition-transform duration-500 ease-out m-12 font-[Montreal-Bold] text-[33px] leading-[30px] tracking-[3px]'>
+              <span>Visual</span><br></br>
+              <span>Merchandising</span><br></br>
+              <span>for Brands</span>
+          </p>
+          <p ref={paraTrois} className='supp500:text-xl translate-y-full transition-transform duration-500 ease-out mt-0 mx-12 mb-12 text-grisTexte font-[Montreal-Medium] font-bold tracking-[1px] text-base'>
+              <span className='supp500:leading-[25px] leading-[20px]'>Tailored to Fashion Brands</span><br></br>
+              <span className='supp500:leading-[25px] leading-[20px]'>One-Click Setups</span>
+          </p>
+          <div ref={paraBtn}  onMouseEnter={enterBtnOrange} onMouseLeave={leaveBtnOrange} className='supp680:h-[100px] supp680:rounded-[30px] translate-y-[50%] transition-transform duration-500 ease-out text-orangeCustom border border-solid border-red-500 w-[150px] h-[60px] ml-12 font-[Montreal-Medium] text-base rounded-[15px] flex flex-row items-center justify-center hover:cursor-pointer'>
+              <div className='w-full h-1/2 relative overflow-hidden'>
+                <p ref={textVisibleBtnOrange} className='visibleSpan'>10-Day Free Trial</p>
+                <p ref={textInvisibleBtnOrange} className='invisibleSpan'>Start for free</p>
               </div>
-            </div>
-            <div ref={paraPhotoVisual} className='blocPhotoDeVisual'>
-              {matches && ( <img ref={imgRotate}  className='bigphoto' src={bigPhotoDeux} alt="Représenation de huight personnes." />)}
-              {!matches && ( <img ref={imgRotate} onMouseMove={imgMoove} onMouseLeave={imgPositionBase} className='bigphoto' src={bigPhoto} alt="Représenation de huight personnes." />)}
-              <img ref={imgRotateDeux} style={matches ? {opacity:0} : {opacity:1}} src={imgSolo} id='imgSolo'  alt="" />
-            </div>
+          </div>
+        </div>
+        <div style={{transition:`transform 0.5s 0.4s ease-out,opacity 0.2s 0.4s ease-out`,boxShadow:`rgba(0, 0, 0, 0.24) 0px 3px 8px`}} ref={paraPhotoVisual} className='supp1100:w-[49%] supp1100:h-full supp1100:p-0 supp1100:mb-0 translate-y-[10%] opacity-0 h-auto w-full bg-blanc rounded-[50px] relative flex flex-row items-center justify-center perspective-[1500px] p-5 mb-4'>
+          {matches && ( <img ref={imgRotate}   className='supp500:w-[80vw] supp1100:w-[97%] supp1740:w-[90%] supp1740:rotate-x-[6deg] supp1740:rotate-y-[-16deg] w-[97%] rotate-x-[0deg] rotate-y-[0deg] transition-all duration-200 ease-linear ' src={bigPhotoDeux} alt="Représenation de huight personnes." />)}
+          {!matches && ( <img ref={imgRotate} onMouseMove={imgMoove} onMouseLeave={imgPositionBase}  className='supp500:w-[80vw] supp1100:w-[97%] supp1740:w-[90%] supp1740:rotate-x-[6deg] supp1740:rotate-y-[-16deg] w-[97%] rotate-x-[0deg] rotate-y-[0deg] transition-all duration-200 ease ease-linear' src={bigPhoto} alt="Représenation de huight personnes." />)}
+          <img ref={imgRotateDeux} style={matches ? {opacity:0} : {opacity:1}} src={imgSolo} className='supp1100:w-[12%] supp1100:scale-[2] supp1100:rotate-x-[6deg] supp1100:rotate-y-[-16deg] absolute w-[10%] scale-[0] translate-x-[45.5%] translate-y-[-44%] rotate-x-[0deg] rotate-y-[0deg] transition-all duration-200 ease-linear'  alt="" />
         </div>
     </div>
+</div>
+
   )
 }
