@@ -18,26 +18,6 @@ module.exports = {
       supp1740:"1740px",
     },
     extend: {
-      transitionDuration: {
-        '400': '400ms',
-      },
-      transitionDelay: {
-        '600': '600ms',
-      },
-      height: {
-        '10vh': '10vh',
-        '150px':"150px",
-      },
-      width: {
-        '70%': '70%',
-        '90%': '90%',
-      },
-      maxWidth: {
-        '1800px': '1800px',
-      },
-      zIndex: {
-        '3000': '3000',
-      },
       colors: {
         'blanc': '#FBFBFB',
         'noir': '#181818',

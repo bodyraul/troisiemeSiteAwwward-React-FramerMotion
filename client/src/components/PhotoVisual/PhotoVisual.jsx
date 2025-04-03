@@ -1,5 +1,4 @@
 import React from 'react'
-import '../PhotoVisual/PhotoVisual.css'
 import imgDollard from "../../assets/img/dollars.svg"
 import bigPhoto from"../../assets/img/homepageTransformed.png"
 import bigPhotoDeux from"../../assets/img/homepage.jpeg"

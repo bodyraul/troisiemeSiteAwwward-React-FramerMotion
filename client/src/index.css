@@ -1,4 +1,110 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("_font.scss");
 
+*,
+::before,
+::after {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+body {
+    background-color: #F3F3F3;
+    overflow-x: hidden;
+    width: 100vw;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+
+.pageAccueil {
+  transition: all 0.5s ease-in-out;
+}
+
+.affichageAccueil {
+  height: 90vh;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partieCard {
+  height: 1300px;
+}
+  
+  .visibleSpan {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.1s 0.1s all;
+  }
+  
+  .invisibleSpan {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.1s all;
+    transform: translateY(35px);
+  }
+  
+  .invisibleSpan.upSpan {
+    transform: translateY(0px);
+    transition: 0.1s 0.1s all;
+  }
+  
+  .visibleSpan.upSpan {
+    transform: translateY(-35px);
+    transition: 0.1s all;
+  }
+
+.animAllBar{
+  -webkit-animation:animbare 90s linear  infinite;
+    -moz-animation: animbare 90s linear  infinite;
+     -ms-animation: animbare 90s linear  infinite;
+      -o-animation: animbare 90s linear  infinite;
+         animation: animbare 90s linear  infinite;
+}
+
+@keyframes animbare {
+  from{transform: translateX(0px);}
+  to{transform: translateX(-3000px);}
+}
+
+.animAllBarResponsive{
+  -webkit-animation: animbareResponsive 90s linear  infinite;
+    -moz-animation: animbareResponsive 90s linear  infinite;
+     -ms-animation: animbareResponsive 90s linear  infinite;
+      -o-animation: animbareResponsive 90s linear  infinite;
+         animation: animbareResponsive 90s linear  infinite;
+}
+
+@keyframes animbareResponsive {
+  from{transform: translateX(0px);}
+  to{transform: translateX(-2222px);}
+}
+
+
+
+@media screen and (max-width: 1740px) {
+    .affichageAccueil {
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 1350px) {
+    .partieCard {
+      height: 1900px;
+    }
+  }
