@@ -7,7 +7,9 @@ import imgElysa from '../../assets/img/elysa.jpeg'
 import imgCassandra from '../../assets/img/casandra.jpeg'
 import imgQuotation from '../../assets/img/quotation.png'
 import { useRef } from 'react'
-import { motion, useScroll,useTransform, useMotionValueEvent } from "framer-motion"
+import {  useScroll,useTransform } from "framer-motion"
+import ParaDefilementPersonnel from '../../componentsReutilisable/ParaDefilementPersonnel'
+import useSetColor from '../../customHoocks/useSetColor'
 
 export default function DefilementPersonnel({setcolor}) {
     
@@ -18,17 +20,8 @@ export default function DefilementPersonnel({setcolor}) {
         offset:["0 1","1 1"],
       })
 
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if(latest<0.10){
-        setcolor("#F3F3F3");
-    }
-    if(latest>=0.10 && latest<= 0.15){
-        setcolor("#5F5F5F");
-    }
-    if(latest>0.15){
-        setcolor("#181818");
-    }
-    })
+    useSetColor(scrollYProgress,setcolor,0.10,"#f3f3f3",0.13,"#bfbfbf",0.16,"#5f5f5f",0.19,"#181818");  
+   
 
     const transformImgUne = useTransform(scrollYProgress,[0.10,0.27],["translate3d(0,-50px,0px) rotateZ(-20deg)","translate3d(0px,0px,0px) rotateZ(0deg)"]);
     const transformImgDeux = useTransform(scrollYProgress,[0.10,0.26],["translate3d(0,-130px,0px) rotateZ(-20deg)","translate3d(0px,0px,0px) rotateZ(0deg)"]);
@@ -41,78 +34,19 @@ export default function DefilementPersonnel({setcolor}) {
     const opacityParaDeux = useTransform(scrollYProgress,[0.45,0.55,0.8,0.9],[0,1,1,0]);
     const opacityParaTrois = useTransform(scrollYProgress,[0.8,0.9],[0,1]);
 
+    const tabTextUn=["Awork(life)saving app.","Time-effective visual","Depict has"];
+    const tabTextDeux=["We saved 40% of our","merchandising, Depict is","workflow with AI"];
+    const tabTextTrois=["time merchandising","super user-friendly and","capabilities to enhance"];
+    const tabParaTextQuatre=["every month.","smart.","our operations."];
+    const tabParaCinq=["Hanny Eldblom","Karin Lijenfeldt","Cassandra Backman"];
+    const tabParaSix=["Head of Ecommerce","Ecommerce Manager","Ecommerce Manager"];
+
     return(
         <div ref={ref}  className='h-[5000px] w-screen relative'>
            <div className='sticky top-0 h-screen w-full'>
-               <motion.div style={{transform:defilementParaUn,opacity:opacityParaUn}} className='w-[1200px] h-[500px] absolute top-1/2 left-1/2 flex flex-row items-center justify-between translate-x-[-50%] translate-y-[-50%]'>
-                   <motion.div style={{transform:transformContainerUn,transition: "all 0.1s  linear"}} className='w-1/2 h-full bg-cardUn mr-5 rounded-[50px] flex flex-col items-center justify-center'>		
-                       <div className='w-full h-1/2 flex flex-col items-center justify-center'>
-                           <img className='w-[130px]' src={imgQuotation} alt="représentation de deux symboles quotation." />
-                       </div>
-                       <div  className='w-full h-1/2 flex flex-col items-center justify-start text-blanc font-[Montreal-Bold] text-[33px] leading-5'>
-                           <span>Awork(life)saving app.</span><br></br><span>We saved 40% of our</span><br></br><span>time merchandising</span><br></br><span>every month.</span>
-                       </div>
-                   </motion.div>
-                   <div className='w-1/2 h-full flex flex-col items-center justify-between'>
-                       <div className='w-full h-[55%] mb-5 flex flex-row items-center justify-center'>
-                           <motion.div style={{transform:transformImgUne,transition: "all 0.1s  linear"}} className='w-1/2 h-full bg-[rgb(240,248,255)] rounded-[40px] mr-[10px]'>
-                                   <img className='w-full h-full rounded-[40px]' src={imgAnnie} alt="représentation d'une femme." />   
-                           </motion.div>
-                           <motion.div style={{transform:transformImgDeux,transition: "all 0.1s  linear"}} className='w-1/2 h-full bg-blanc rounded-[40px] ml-[10px] flex flex-row items-center justify-center'>
-                               <img className='w-[58%]' src={imgStronger} alt="représentation du mot stronger." />
-                           </motion.div>
-                       </div>
-                       <motion.div style={{transform:transformContainerDeux,transition: "all 0.1s  linear"}} className='w-full h-[45%] bg-cardUn rounded-[50px] flex flex-col items-center justify-center leading-[18px]'>
-                           <span className='text-blanc font-[Montreal-Bold] text-[40px]'>Hanny Eldblom</span><br></br> <span className='text-blanc font-[Montreal-Bold] text-[19px]'>Head of Ecommerce</span>
-                       </motion.div>
-                   </div>
-               </motion.div>
-               <motion.div style={{transform:defilementParaDeux,opacity:opacityParaDeux}} className='w-[1200px] h-[500px] absolute top-1/2 left-1/2 flex flex-row items-center justify-between translate-x-[70%] translate-y-[-50%]'>
-                   <div className='w-1/2 h-full bg-cardUn mr-5 rounded-[50px] flex flex-col items-center justify-center'>		
-                       <div className='w-full h-1/2 flex flex-col items-center justify-center'>
-                           <img className='w-[130px]' src={imgQuotation}alt="représentation de deux symboles quotation." />
-                       </div>
-                       <div  className='w-full h-1/2 flex flex-col items-center justify-start text-blanc font-[Montreal-Bold] text-[33px] leading-5'>
-                           <span>Time-effective visual</span><br></br><span>merchandising, Depict is</span><br></br><span>super user-friendly and</span><br></br><span>smart.</span>
-                       </div>
-                   </div>
-                   <div className='w-1/2 h-full flex flex-col items-center justify-between'>
-                       <div className='w-full h-[55%] mb-5 flex flex-row items-center justify-center'>
-                           <div className='w-1/2 h-full bg-[rgb(240,248,255)] rounded-[40px] mr-[10px]'>
-                                   <img className='w-full h-full rounded-[40px]' src={imgElysa} alt="représentation d'une femme." />   
-                           </div>
-                           <div className='w-1/2 h-full bg-blanc rounded-[40px] ml-[10px] flex flex-row items-center justify-center'>
-                               <img className='w-[58%]' src={imgEytis} alt="représentation d'une femme." />
-                           </div>
-                       </div>
-                       <div className='w-full h-[45%] bg-cardUn rounded-[50px] flex flex-col items-center justify-center leading-[18px]'>
-                           <span className='text-blanc font-[Montreal-Bold] text-[40px]'>Karin Lijenfeldt</span><br></br> <span className='text-blanc font-[Montreal-Bold] text-[19px]'>Ecommerce Manager</span>
-                       </div>
-                   </div>
-               </motion.div>
-               <motion.div style={{transform:defilementParaTrois,opacity:opacityParaTrois}} className='w-[1200px] h-[500px] absolute top-1/2 left-1/2 flex flex-row items-center justify-between translate-x-[190%] translate-y-[-50%]'>
-                   <div className='w-1/2 h-full bg-cardUn mr-5 rounded-[50px] flex flex-col items-center justify-center'>		
-                       <div className='w-full h-1/2 flex flex-col items-center justify-center'>
-                           <img className='w-[130px]' src={imgQuotation} alt="représentation de deux symboles quotation." />
-                       </div>
-                       <div  className='w-full h-1/2 flex flex-col items-center justify-start text-blanc font-[Montreal-Bold] text-[33px] leading-5'>
-                           <span>Depict has</span><br></br><span>revolutionized our</span><br></br><span>workflow with AI</span><br></br><span>capabilities to enhance</span><br></br><span>our operations.</span>
-                       </div>
-                   </div>
-                   <div className='w-1/2 h-full flex flex-col items-center justify-between'>
-                       <div className='w-full h-[55%] mb-5 flex flex-row items-center justify-center'>
-                           <div  className='w-1/2 h-full bg-[rgb(240,248,255)] rounded-[40px] mr-[10px]'>
-                                   <img className='w-full h-full rounded-[40px]'  src={imgCassandra}  alt="représentation d'une femme." />   
-                           </div>
-                           <div className='w-1/2 h-full bg-blanc rounded-[40px] ml-[10px] flex flex-row items-center justify-center'>
-                               <img className='w-[58%]' src={imgUnderstatement} alt="représentation du mot understatement." />
-                           </div>
-                       </div>
-                       <div className='w-full h-[45%] bg-cardUn rounded-[50px] flex flex-col items-center justify-center leading-[18px]'>
-                           <span className='text-blanc font-[Montreal-Bold] text-[40px]'>Cassandra Backman</span><br></br> <span className='text-blanc font-[Montreal-Bold] text-[19px]'>Ecommerce Manager</span>
-                       </div>
-                   </div>
-               </motion.div>
+                <ParaDefilementPersonnel motionBol={true} transformUn={defilementParaUn} opacity={opacityParaUn} transformDeux={transformContainerUn} srcUn={imgQuotation} textUn={tabTextUn[0]} textDeux={tabTextDeux[0]} textTrois={tabTextTrois[0]} paraQuatre={tabParaTextQuatre[0]} transformTrois={transformImgUne} srcDeux={imgAnnie} transformQuatre={transformImgDeux} srcTrois={imgStronger} transformCinq={transformContainerDeux} paraCinq={tabParaCinq[0]} paraSix={tabParaSix[0]}></ParaDefilementPersonnel>
+                <ParaDefilementPersonnel motionBol={false} transformUn={defilementParaDeux} opacity={opacityParaDeux} transformDeux={""} srcUn={imgQuotation} textUn={tabTextUn[1]} textDeux={tabTextDeux[1]} textTrois={tabTextTrois[1]} paraQuatre={tabParaTextQuatre[1]} transformTrois={""} srcDeux={imgElysa} transformQuatre={""} srcTrois={imgEytis} transformCinq={""} paraCinq={tabParaCinq[1]} paraSix={tabParaSix[1]}></ParaDefilementPersonnel>
+                <ParaDefilementPersonnel motionBol={false} transformUn={defilementParaTrois} opacity={opacityParaTrois} transformDeux={""} srcUn={imgQuotation} textUn={tabTextUn[2]} textDeux={tabTextDeux[2]} textTrois={tabTextTrois[2]} paraQuatre={tabParaTextQuatre[2]} transformTrois={""} srcDeux={imgCassandra} transformQuatre={""} srcTrois={imgUnderstatement} transformCinq={""} paraCinq={tabParaCinq[2]} paraSix={tabParaSix[2]}></ParaDefilementPersonnel>
            </div>
        </div>
        )

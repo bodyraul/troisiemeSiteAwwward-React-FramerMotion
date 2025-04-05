@@ -3,8 +3,9 @@ import imgDoight from '../../assets/img/doight.svg'
 import imgFleche from '../../assets/img/triangleHautBas.svg'
 import carrer from '../../assets/img/groupe.svg'
 import { useRef } from 'react'
-import { motion, useScroll,useTransform, useMotionValueEvent } from "framer-motion"
+import { motion, useScroll,useTransform } from "framer-motion"
 import ResponsiveCardSolo from '../../componentsReutilisable/ResponsiveCardSolo'
+import useSetColor from '../../customHoocks/useSetColor'
 
 export default function ResponsiveCards({setcolor}) {
 
@@ -22,20 +23,7 @@ export default function ResponsiveCards({setcolor}) {
     const ColorTitre= useTransform(scrollYProgress,[0,0.40,0.41666,0.50,0.58],[`#181818`,`#181818`,`#4F4F4F`,`#B2B2B2`,`#FBFBFB`]);
     const opacityTitre= useTransform(scrollYProgress,[0,0.6,0.8,0.85,0.9],[1,1,0.7,0.4,0]);
 
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if(latest<0.4){
-        setcolor("#F3F3F3");
-    }
-    if(latest>=0.4 && latest<= 0.42){
-        setcolor("#BFBFBF");
-    }
-    if(latest>=0.49 && latest<= 0.51){
-        setcolor("#5F5F5F");
-    }
-    if(latest>0.51){
-        setcolor("#181818");
-    }
-    })
+  useSetColor(scrollYProgress,setcolor,0.4,"#f3f3f3",0.42,"#bfbfbf",0.49,"#5f5f5f",0.51,"#181818");
 
   return (
   <div ref={englobeCardTitreResponsive} className='h-[1800px] w-full mt-[200px] flex flex-col items-center justify-center relative'>

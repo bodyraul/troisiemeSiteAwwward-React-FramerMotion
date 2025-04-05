@@ -70,6 +70,14 @@ body {
     transition: 0.1s all;
   }
 
+  .imgSoloMerchandising{
+    transform: scale(2) rotateX(6deg) rotateY(-16deg) translateX(45.5%) translateY(-44%);
+  }
+
+  .bigImgMerchandising{
+    transform: rotateX(6deg) rotateY(-16deg);
+  }
+
 .animAllBar{
   -webkit-animation:animbare 90s linear  infinite;
     -moz-animation: animbare 90s linear  infinite;
@@ -106,5 +114,13 @@ body {
   @media screen and (max-width: 1350px) {
     .partieCard {
       height: 1900px;
+    }
+  }
+  @media screen and (max-width: 1110px) {
+    .imgSoloMerchandising{
+      transform: scale(0) rotateX(0deg) rotateY(0deg) translateX(45.5%) translateY(-44%);
+    }
+    .bigImgMerchandising{
+      transform: rotateX(0deg) rotateY(0deg);
     }
   }

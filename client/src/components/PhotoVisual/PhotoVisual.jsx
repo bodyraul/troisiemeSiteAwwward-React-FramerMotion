@@ -32,8 +32,9 @@ export default function PhotoVisual() {
     textInvisibleBtnOrange.current.classList.remove('upSpan');
     textVisibleBtnOrange.current.classList.remove('upSpan');
   }
+  
 
-  const imgMoove = (e)=>{
+ const imgMoove = (e)=>{
     const left = imgRotate.current.getBoundingClientRect().left;
     const right = imgRotate.current.getBoundingClientRect().right;
     const top = imgRotate.current.getBoundingClientRect().top;
@@ -131,7 +132,8 @@ useEffect(() => {
               <span>for Brands</span>
           </p>
           <p ref={paraTrois} className='supp500:text-xl translate-y-full transition-transform duration-500 ease-out mt-0 mx-12 mb-12 text-grisTexte font-[Montreal-Medium] font-bold tracking-[1px] text-base'>
-              <span className='supp500:leading-[25px] leading-[20px]'>Tailored to Fashion Brands</span><br></br>
+              <span className='supp500:leading-[25px] leading-[20px]'>Tailored to Fashion Brands</span>
+              <br></br>
               <span className='supp500:leading-[25px] leading-[20px]'>One-Click Setups</span>
           </p>
           <div ref={paraBtn}  onMouseEnter={enterBtnOrange} onMouseLeave={leaveBtnOrange} className='supp680:h-[100px] supp680:rounded-[30px] translate-y-[50%] transition-transform duration-500 ease-out text-orangeCustom border border-solid border-red-500 w-[150px] h-[60px] ml-12 font-[Montreal-Medium] text-base rounded-[15px] flex flex-row items-center justify-center hover:cursor-pointer'>
@@ -142,9 +144,9 @@ useEffect(() => {
           </div>
         </div>
         <div style={{transition:`transform 0.5s 0.4s ease-out,opacity 0.2s 0.4s ease-out`,boxShadow:`rgba(0, 0, 0, 0.24) 0px 3px 8px`}} ref={paraPhotoVisual} className='supp1100:w-[49%] supp1100:h-full supp1100:p-0 supp1100:mb-0 translate-y-[10%] opacity-0 h-auto w-full bg-blanc rounded-[50px] relative flex flex-row items-center justify-center perspective-[1500px] p-5 mb-4'>
-          {matches && ( <img ref={imgRotate}   className='supp500:w-[80vw] supp1100:w-[97%] supp1740:w-[90%] supp1740:rotate-x-[6deg] supp1740:rotate-y-[-16deg] w-[97%] rotate-x-[0deg] rotate-y-[0deg] transition-all duration-200 ease-linear ' src={bigPhotoDeux} alt="Représenation de huight personnes." />)}
-          {!matches && ( <img ref={imgRotate} onMouseMove={imgMoove} onMouseLeave={imgPositionBase}  className='supp500:w-[80vw] supp1100:w-[97%] supp1740:w-[90%] supp1740:rotate-x-[6deg] supp1740:rotate-y-[-16deg] w-[97%] rotate-x-[0deg] rotate-y-[0deg] transition-all duration-200 ease ease-linear' src={bigPhoto} alt="Représenation de huight personnes." />)}
-          <img ref={imgRotateDeux} style={matches ? {opacity:0} : {opacity:1}} src={imgSolo} className='supp1100:w-[12%] supp1100:scale-[2] supp1100:rotate-x-[6deg] supp1100:rotate-y-[-16deg] absolute w-[10%] scale-[0] translate-x-[45.5%] translate-y-[-44%] rotate-x-[0deg] rotate-y-[0deg] transition-all duration-200 ease-linear'  alt="" />
+          {matches && ( <img ref={imgRotate}   className='bigImgMerchandising supp500:w-[80vw] supp1100:w-[97%] supp1740:w-[90%]  w-[97%]  transition-all duration-200 ease-linear ' src={bigPhotoDeux} alt="Représenation de huight personnes." />)}
+          {!matches && ( <img ref={imgRotate} onMouseMove={imgMoove} onMouseLeave={imgPositionBase}  className='bigImgMerchandising supp500:w-[80vw] supp1100:w-[97%] supp1740:w-[90%]  w-[97%]  transition-all duration-200 ease ease-linear' src={bigPhoto} alt="Représenation de huight personnes." />)}
+          <img ref={imgRotateDeux} style={matches ? {opacity:0} : {opacity:1}} src={imgSolo} className='imgSoloMerchandising supp1100:w-[12%]  absolute w-[10%]  transition-all duration-200 ease-linear'   alt="" />
         </div>
     </div>
 </div>

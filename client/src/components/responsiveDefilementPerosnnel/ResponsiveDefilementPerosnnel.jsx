@@ -4,7 +4,8 @@ import imgAnnie from '../../assets/img/hanny.jpeg'
 import imgElysa from '../../assets/img/elysa.jpeg'
 import imgQuotation from '../../assets/img/quotation.png'
 import { useRef } from 'react'
-import {  useScroll, useMotionValueEvent } from "framer-motion"
+import {  useScroll} from "framer-motion"
+import useSetColor from '../../customHoocks/useSetColor'
 
 export default function ResponsiveDefilementPerosnnel({setcolor}) {
 
@@ -15,19 +16,7 @@ export default function ResponsiveDefilementPerosnnel({setcolor}) {
             offset:["0 1","1 1"],
           })
     
-    
-        
-        useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        if(latest<0.10){
-            setcolor("#F3F3F3");
-        }
-        if(latest>=0.10 && latest<= 0.15){
-            setcolor("#5F5F5F");
-        }
-        if(latest>0.15){
-            setcolor("#181818");
-        }
-        })
+        useSetColor(scrollYProgress,setcolor,0.10,"#f3f3f3",0.13,"#bfbfbf",0.16,"#5f5f5f",0.19,"#181818");  
 
   return (
     <div ref={ref} className='mt-[50px] w-screen'>

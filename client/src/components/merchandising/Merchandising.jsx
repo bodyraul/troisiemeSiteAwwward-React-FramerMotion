@@ -3,13 +3,14 @@ import { useRef } from 'react'
 import pointImg from '../../assets/img/carrerOrange.svg'
 import triangleImg from '../../assets/img/triangleHautBas.svg'
 import statImg from '../../assets/img/troisBarres.svg'
-import { motion,useTransform,useScroll,useMotionValueEvent } from "framer-motion"
+import { motion,useTransform,useScroll } from "framer-motion"
 import imgUne from '../../assets/img/mainImage.png'
 import imgdeux from '../../assets/img/homepage.jpeg'
 import imgTrois from '../../assets/img/homepage2.jpeg'
 import imgQuatre from '../../assets/img/stats.png'
 import ImgRightMerchandising from '../../componentsReutilisable/ImgRightMerchandising'
 import ParaLeftMerchandising from '../../componentsReutilisable/ParaLeftMerchandising'
+import useSetColor from '../../customHoocks/useSetColor'
 
 export default function Merchandising({setcolor}) {
 
@@ -35,24 +36,8 @@ export default function Merchandising({setcolor}) {
   const opacityImgTrois = useTransform(scrollYProgress,[0.72,0.77,0.87,0.92],[0,1,1,0]);
   const opacityImgQuatre = useTransform(scrollYProgress,[0.93,1],[0,1]);
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if(latest<0.17 ){
+  useSetColor(scrollYProgress,setcolor,0.17,"#181818",0.19,"#5F5F5F",0.2,"#bfbfbf",0.21,"#f3f3f3");
 
-      setcolor("#181818");
-    }
-    if(latest>=0.17 && latest<= 0.19){
-   
-      setcolor("#5F5F5F");
-    }
-    if(latest>=0.2 && latest<= 0.21){
-
-      setcolor("#BFBFBF");
-    }
-    if(latest>0.21){
-  
-      setcolor("#F3F3F3");
-    }
-  })
 
   const tabAlt=["Représentation de six points oranges.","Représentation d'un triangle orange pointant vers le bas et d'un triangle orange pointant vers le haut.","Représentation de trois barres verticales oranges."]
   const tabTitre=["Editorial Merchandising","Strategic Merchandising","Analytics"]
