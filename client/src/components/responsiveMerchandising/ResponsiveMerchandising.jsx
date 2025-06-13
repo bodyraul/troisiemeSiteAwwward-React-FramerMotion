@@ -1,13 +1,10 @@
 import React from 'react'
 import { useRef } from 'react'
-import pointImg from '../../assets/img/carrerOrange.svg'
-import triangleImg from '../../assets/img/triangleHautBas.svg'
-import statImg from '../../assets/img/troisBarres.svg'
 import { useScroll } from "framer-motion"
-import imgUne from '../../assets/img/mainImage.png'
-import imgdeux from '../../assets/img/homepage.jpeg'
-import imgTrois from '../../assets/img/homepage2.jpeg'
-import imgQuatre from '../../assets/img/stats.png'
+import soloWomen from '../../assets/img/soloWomen.jpg'
+import allMannequin from"../../assets/img/allMannequin.jpg"
+import summerCollection from"../../assets/img/summerCollection.jpg"
+import statVente from"../../assets/img/statVente.jpg"
 import ParaResponsiveMerchandising from '../../componentsReutilisable/ParaResponsiveMerchandising'
 import useSetColor from '../../customHoocks/useSetColor'
 
@@ -27,10 +24,10 @@ export default function ResponsiveMerchandising({setcolor}) {
 
   return(
         <div ref={target}  className='h-auto w-full flex flex-col items-center justify-start'>
-          <ParaResponsiveMerchandising bolean={true} srcUn={imgUne} textUn={tabTextUn[0]} textDeux={tabTextDeux[0]} textTrois={textParaTrois} srcDeux={""} ></ParaResponsiveMerchandising>
-          <ParaResponsiveMerchandising bolean={false} srcUn={pointImg} textUn={tabTextUn[1]} textDeux={tabTextDeux[1]} textTrois={""} srcDeux={imgdeux} ></ParaResponsiveMerchandising>
-          <ParaResponsiveMerchandising bolean={false} srcUn={triangleImg} textUn={tabTextUn[2]} textDeux={tabTextDeux[2]} textTrois={""} srcDeux={imgTrois} ></ParaResponsiveMerchandising>
-          <ParaResponsiveMerchandising bolean={false} srcUn={statImg} textUn={tabTextUn[3]} textDeux={tabTextDeux[3]} textTrois={""} srcDeux={imgQuatre} ></ParaResponsiveMerchandising>
+          <ParaResponsiveMerchandising  srcUn={soloWomen} textUn={tabTextUn[0]} textDeux={tabTextDeux[0]} textTrois={textParaTrois}  ></ParaResponsiveMerchandising>
+          <ParaResponsiveMerchandising  srcUn={allMannequin} textUn={tabTextUn[1]} textDeux={tabTextDeux[1]} textTrois={""}  ></ParaResponsiveMerchandising>
+          <ParaResponsiveMerchandising  srcUn={summerCollection} textUn={tabTextUn[2]} textDeux={tabTextDeux[2]} textTrois={""}  ></ParaResponsiveMerchandising>
+          <ParaResponsiveMerchandising  srcUn={statVente} textUn={tabTextUn[3]} textDeux={tabTextDeux[3]} textTrois={""}  ></ParaResponsiveMerchandising>
         </div>
       )
 }

@@ -16,7 +16,7 @@ export default function ParaDefilementPersonnel({motionBol,transformUn,opacity,t
             <div className='w-1/2 h-full flex flex-col items-center justify-between'>
                 <div className='w-full h-[55%] mb-5 flex flex-row items-center justify-center'>
                     <motion.div style={{transform:transformTrois,transition: "all 0.1s  linear"}} className='w-1/2 h-full bg-[rgb(240,248,255)] rounded-[40px] mr-[10px]'>
-                            <img className='w-full h-full rounded-[40px]' src={srcDeux} alt="représentation d'une femme." />   
+                            <img className='w-full h-full rounded-[40px]' src={srcDeux} alt="femme créé par intelligence artificielle" />   
                     </motion.div>
                     <motion.div style={{transform:transformQuatre,transition: "all 0.1s  linear"}} className='w-1/2 h-full bg-blanc rounded-[40px] ml-[10px] flex flex-row items-center justify-center'>
                         <img className='w-[58%]' src={srcTrois} alt="représentation du mot stronger." />
@@ -43,10 +43,10 @@ export default function ParaDefilementPersonnel({motionBol,transformUn,opacity,t
             <div className='w-1/2 h-full flex flex-col items-center justify-between'>
                 <div className='w-full h-[55%] mb-5 flex flex-row items-center justify-center'>
                     <div className='w-1/2 h-full bg-[rgb(240,248,255)] rounded-[40px] mr-[10px]'>
-                            <img className='w-full h-full rounded-[40px]' src={srcDeux} alt="représentation d'une femme." />   
+                            <img className='w-full h-full rounded-[40px]' src={srcDeux} alt="femme créé par intelligence artificielle" />   
                     </div>
                     <div className='w-1/2 h-full bg-blanc rounded-[40px] ml-[10px] flex flex-row items-center justify-center'>
-                        <img className='w-[58%]' src={srcTrois} alt="représentation d'une femme." />
+                        <img className='w-[58%]' src={srcTrois} alt="femme créé par intelligence artificielle" />
                     </div>
                 </div>
                 <div className='w-full h-[45%] bg-cardUn rounded-[50px] flex flex-col items-center justify-center leading-[18px]'>

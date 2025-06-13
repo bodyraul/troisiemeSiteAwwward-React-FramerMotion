@@ -1,7 +1,7 @@
 import React from 'react'
-import imgDoight from '../../assets/img/doight.svg'
-import imgFleche from '../../assets/img/triangleHautBas.svg'
-import carrer from '../../assets/img/groupe.svg'
+import imgDoight from '../../assets/img/doights.svg'
+import imgFleche from '../../assets/img/triangles.png'
+import carrer from '../../assets/img/carrer.png'
 import { useRef } from 'react'
 import { motion, useScroll,useTransform } from "framer-motion"
 import ResponsiveCardSolo from '../../componentsReutilisable/ResponsiveCardSolo'

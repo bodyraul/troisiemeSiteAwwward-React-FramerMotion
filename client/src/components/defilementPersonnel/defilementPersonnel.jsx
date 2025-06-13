@@ -1,11 +1,14 @@
 import React from 'react'
-import imgStronger from '../../assets/img/stronger.png'
-import imgEytis from '../../assets/img/eytis.png'
-import imgUnderstatement from '../../assets/img/understatement.png'
-import imgAnnie from '../../assets/img/hanny.jpeg'
-import imgElysa from '../../assets/img/elysa.jpeg'
-import imgCassandra from '../../assets/img/casandra.jpeg'
-import imgQuotation from '../../assets/img/quotation.png'
+import partner from '../../assets/img/partner.jpg'
+import communication from '../../assets/img/communication.jpg'
+import strategie from '../../assets/img/strategie.jpg'
+import virgule from '../../assets/img/virgule.png'
+import cercle from '../../assets/img/cercle.png'
+import inter from '../../assets/img/inter.png'
+import femmeUne from '../../assets/img/femme-Une.jpg'
+import femmeDeux from '../../assets/img/femme-Deux.jpg'
+import femmeTrois from '../../assets/img/femme-Trois.jpg'
+
 import { useRef } from 'react'
 import {  useScroll,useTransform } from "framer-motion"
 import ParaDefilementPersonnel from '../../componentsReutilisable/ParaDefilementPersonnel'
@@ -34,19 +37,19 @@ export default function DefilementPersonnel({setcolor}) {
     const opacityParaDeux = useTransform(scrollYProgress,[0.45,0.55,0.8,0.9],[0,1,1,0]);
     const opacityParaTrois = useTransform(scrollYProgress,[0.8,0.9],[0,1]);
 
-    const tabTextUn=["Awork(life)saving app.","Time-effective visual","Depict has"];
-    const tabTextDeux=["We saved 40% of our","merchandising, Depict is","workflow with AI"];
-    const tabTextTrois=["time merchandising","super user-friendly and","capabilities to enhance"];
-    const tabParaTextQuatre=["every month.","smart.","our operations."];
-    const tabParaCinq=["Hanny Eldblom","Karin Lijenfeldt","Cassandra Backman"];
-    const tabParaSix=["Head of Ecommerce","Ecommerce Manager","Ecommerce Manager"];
+    const tabTextUn=["A lifesaving app for work,","Effective visual ","TechNova integrates"];
+    const tabTextDeux=["saving 40% of our","merchandising, TechNova  "," processes with AI"];
+    const tabTextTrois=["merchandising time","is smart and very","to improve"];
+    const tabParaTextQuatre=["each month."," user-friendly.","our operations."];
+    const tabParaCinq=["Madison Harper","Brooklyn Avery","Skylar Bennett"];
+    const tabParaSix=["Financial Manager"," Project Manager"," Marketing Manager"];
 
     return(
         <div ref={ref}  className='h-[5000px] w-screen relative'>
            <div className='sticky top-0 h-screen w-full'>
-                <ParaDefilementPersonnel motionBol={true} transformUn={defilementParaUn} opacity={opacityParaUn} transformDeux={transformContainerUn} srcUn={imgQuotation} textUn={tabTextUn[0]} textDeux={tabTextDeux[0]} textTrois={tabTextTrois[0]} paraQuatre={tabParaTextQuatre[0]} transformTrois={transformImgUne} srcDeux={imgAnnie} transformQuatre={transformImgDeux} srcTrois={imgStronger} transformCinq={transformContainerDeux} paraCinq={tabParaCinq[0]} paraSix={tabParaSix[0]}></ParaDefilementPersonnel>
-                <ParaDefilementPersonnel motionBol={false} transformUn={defilementParaDeux} opacity={opacityParaDeux} transformDeux={""} srcUn={imgQuotation} textUn={tabTextUn[1]} textDeux={tabTextDeux[1]} textTrois={tabTextTrois[1]} paraQuatre={tabParaTextQuatre[1]} transformTrois={""} srcDeux={imgElysa} transformQuatre={""} srcTrois={imgEytis} transformCinq={""} paraCinq={tabParaCinq[1]} paraSix={tabParaSix[1]}></ParaDefilementPersonnel>
-                <ParaDefilementPersonnel motionBol={false} transformUn={defilementParaTrois} opacity={opacityParaTrois} transformDeux={""} srcUn={imgQuotation} textUn={tabTextUn[2]} textDeux={tabTextDeux[2]} textTrois={tabTextTrois[2]} paraQuatre={tabParaTextQuatre[2]} transformTrois={""} srcDeux={imgCassandra} transformQuatre={""} srcTrois={imgUnderstatement} transformCinq={""} paraCinq={tabParaCinq[2]} paraSix={tabParaSix[2]}></ParaDefilementPersonnel>
+                <ParaDefilementPersonnel motionBol={true} transformUn={defilementParaUn} opacity={opacityParaUn} transformDeux={transformContainerUn} srcUn={cercle} textUn={tabTextUn[0]} textDeux={tabTextDeux[0]} textTrois={tabTextTrois[0]} paraQuatre={tabParaTextQuatre[0]} transformTrois={transformImgUne} srcDeux={femmeTrois} transformQuatre={transformImgDeux} srcTrois={partner} transformCinq={transformContainerDeux} paraCinq={tabParaCinq[0]} paraSix={tabParaSix[0]}></ParaDefilementPersonnel>
+                <ParaDefilementPersonnel motionBol={false} transformUn={defilementParaDeux} opacity={opacityParaDeux} transformDeux={""} srcUn={virgule} textUn={tabTextUn[1]} textDeux={tabTextDeux[1]} textTrois={tabTextTrois[1]} paraQuatre={tabParaTextQuatre[1]} transformTrois={""} srcDeux={femmeUne} transformQuatre={""} srcTrois={communication} transformCinq={""} paraCinq={tabParaCinq[1]} paraSix={tabParaSix[1]}></ParaDefilementPersonnel>
+                <ParaDefilementPersonnel motionBol={false} transformUn={defilementParaTrois} opacity={opacityParaTrois} transformDeux={""} srcUn={inter} textUn={tabTextUn[2]} textDeux={tabTextDeux[2]} textTrois={tabTextTrois[2]} paraQuatre={tabParaTextQuatre[2]} transformTrois={""} srcDeux={femmeDeux} transformQuatre={""} srcTrois={strategie} transformCinq={""} paraCinq={tabParaCinq[2]} paraSix={tabParaSix[2]}></ParaDefilementPersonnel>
            </div>
        </div>
        )

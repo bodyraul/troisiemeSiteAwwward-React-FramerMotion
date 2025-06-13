@@ -1,7 +1,7 @@
 import React from 'react'
-import imgDoight from '../../assets/img/doight.svg'
-import imgFleche from '../../assets/img/triangleHautBas.svg'
-import carrer from '../../assets/img/groupe.svg'
+import imgDoight from '../../assets/img/doights.svg'
+import imgFleche from '../../assets/img/triangles.png'
+import carrer from '../../assets/img/carrer.png'
 import { useRef } from 'react'
 import { motion, useScroll,useTransform } from "framer-motion"
 import CardSolo from '../../componentsReutilisable/CardSolo'
@@ -26,11 +26,11 @@ export default function Cards({setcolor}) {
 
     return (
       <div  ref={englobeCardTitre}  className='h-[1200px] w-full flex flex-col items-center justify-center relative'>
-        <motion.div style={{color:ColorTitre,opacity:opacityTitre}}  className='sticky top-1/4 text-noir font-[Montreal-Bold] text-[50px] text-center leading-[50px] mb-[100px] transition-all duration-100 ease-linear'>Collections are your most <br></br>important pages, but are <br></br>frustrating to manage</motion.div>
+        <motion.div style={{color:ColorTitre,opacity:opacityTitre}}  className='sticky top-1/4 text-noir font-[Montreal-Bold] text-[50px] text-center leading-[50px] mb-[100px] transition-all duration-100 ease-linear'>Collections are your <br></br>key pages, but, <br></br>difficult to manage.</motion.div>
         <div  className="w-[1320px] h-[500px] mb-[10px] relative">
-          <CardSolo rotation={rotationCardUne} opacity={"0.3"} color={"#212121"}  source={imgDoight} left={"0px"} descriptionImg={"Representation d'une main orange avec l'index levé."} textUn={`Non-Visual`} textDeux={"Curation"} textTrois={"Manually curating your collections"} textQuatre={"feels like doing your taxes."}></CardSolo>
-          <CardSolo rotation={rotationCardDeux} opacity={"0.6"} color={"#2b2b2b"}  source={imgFleche} left={"33.3%"} descriptionImg={"Representation d'une flêche orange pointant vers le haut et d'une flêche orange pointant vers le bas."}  textUn={`Limited `} textDeux={"Sorting"} textTrois={"Its too basic to sort your collections"} textQuatre={"by New in or Best Sellers."}></CardSolo>
-          <CardSolo rotation={rotationCardTrois} opacity={"0.7"} color={"#363636"}  source={carrer} left={"66%"} descriptionImg={"Representation de deux containers oranges suppersposés."} textUn={`Messy `} textDeux={"Data"} textTrois={"You need 5 tabs open to take data-"} textQuatre={"driven decisions from excell sheets."}></CardSolo>
+          <CardSolo rotation={rotationCardUne} opacity={"0.3"} color={"#212121"}  source={imgDoight} left={"0px"} descriptionImg={"Representation d'une main orange avec l'index levé."} textUn={`Organize`} textDeux={"Collection"} textTrois={"To organise a clothing collection,"} textQuatre={"sort by type,color and season."}></CardSolo>
+          <CardSolo rotation={rotationCardDeux} opacity={"0.6"} color={"#2b2b2b"}  source={imgFleche} left={"33.3%"} descriptionImg={"Representation d'une flêche orange pointant vers le haut et d'une flêche orange pointant vers le bas."}  textUn={`Restricted `} textDeux={"Choice"} textTrois={"To narrow down your clothing choices,"} textQuatre={"select by style, color and occasion."}></CardSolo>
+          <CardSolo rotation={rotationCardTrois} opacity={"0.7"} color={"#363636"}  source={carrer} left={"66%"} descriptionImg={"Representation de deux containers oranges suppersposés."} textUn={`Disordered `} textDeux={"Data"} textTrois={"Disordered data requires sorting and"} textQuatre={"thorough analysis to be usefull."}></CardSolo>
         </div>
       </div>
     )
