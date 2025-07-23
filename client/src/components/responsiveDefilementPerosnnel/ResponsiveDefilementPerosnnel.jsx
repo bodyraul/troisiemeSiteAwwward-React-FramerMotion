@@ -2,20 +2,14 @@ import React from 'react'
 import imgStronger from '../../assets/img/stronger.png'
 import femmeUne from '../../assets/img/femme-Une.jpg'
 import virgule from '../../assets/img/virgule.png'
-import { useRef } from 'react'
-import {  useScroll} from "framer-motion"
 import useSetColor from '../../customHoocks/useSetColor'
+import UseResDefPersoOnScroll from '../../customHoocks/responsiveDefilementPersonnel/UseResDefPersoOnScroll'
 
 export default function ResponsiveDefilementPerosnnel({setcolor}) {
 
-    const ref=useRef();
-    
-        const {scrollYProgress} = useScroll({
-            target:ref,
-            offset:["0 1","1 1"],
-          })
-    
-        useSetColor(scrollYProgress,setcolor,0.10,"#f3f3f3",0.13,"#bfbfbf",0.16,"#5f5f5f",0.19,"#181818");  
+    const {ref,scrollYProgress} = UseResDefPersoOnScroll();
+
+    useSetColor(scrollYProgress,setcolor,0.10,"#f3f3f3",0.13,"#bfbfbf",0.16,"#5f5f5f",0.19,"#181818");  
 
   return (
     <div ref={ref} className='mt-[50px] w-screen'>

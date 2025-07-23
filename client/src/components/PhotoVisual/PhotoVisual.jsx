@@ -2,105 +2,18 @@ import React from 'react'
 import imgDollard from "../../assets/img/dollars.svg"
 import allMannequin from"../../assets/img/allMannequin.jpg"
 import { useRef } from 'react'
-import { useEffect } from 'react'
-
+import enterBtnOrange from '../../fonction/photoVisualFonction/EnterBtnOrange'
+import leaveBtnOrange from '../../fonction/photoVisualFonction/LeaveBtnOrange'
+import imgMoove from '../../fonction/photoVisualFonction/ImgMoove'
+import imgPositionBase from '../../fonction/photoVisualFonction/ImgPositionBase'
+import UseAffichagePhotoVisual from '../../customHoocks/photoVisualHoocks/UseAffichagePhotoVisual'
 
 export default function PhotoVisual() {
 
-  const textInvisibleBtnOrange = useRef();
-  const textVisibleBtnOrange = useRef();
-  const imgRotate = useRef();
-  const paraVisual = useRef();
-  const paraPhotoVisual = useRef();
-  const paraUn = useRef();
-  const paraDeux = useRef();
-  const paraTrois = useRef();
-  const paraBtn = useRef();
+  const textInvisibleBtnOrange = useRef();const textVisibleBtnOrange = useRef();const imgRotate = useRef();const paraVisual = useRef();
+  const paraPhotoVisual = useRef();const paraUn = useRef();const paraDeux = useRef();const paraTrois = useRef();const paraBtn = useRef();
 
-
-  const enterBtnOrange =()=>{
-    textInvisibleBtnOrange.current.classList.add('upSpan');
-    textVisibleBtnOrange.current.classList.add('upSpan');
-  }
-
-  const leaveBtnOrange=()=>{
-    textInvisibleBtnOrange.current.classList.remove('upSpan');
-    textVisibleBtnOrange.current.classList.remove('upSpan');
-  }
-  
-
- const imgMoove = (e)=>{
-    const left = imgRotate.current.getBoundingClientRect().left;
-    const right = imgRotate.current.getBoundingClientRect().right;
-    const top = imgRotate.current.getBoundingClientRect().top;
-    const bottom = imgRotate.current.getBoundingClientRect().bottom;
-    const middleX = ((left+right)/2);
-    const middleY = ((top+bottom)/2);
-    const sourisX = e.clientX;
-    const sourisY = e.clientY;
-
-    if(sourisY<=middleY){
-      if(sourisX<=middleX){
-        const newX = sourisX-left;
-        const newMidlleX = middleX-left;
-        const rotateX = (-1*(20-(newX*20)/newMidlleX));
-        const newY = sourisY - top;
-        const newMidlleY = middleY-top;
-        const rotateY = 10-((newY*10)/newMidlleY);
-        imgRotate.current.style.transform = `rotateX(${rotateY}deg) rotateY(${rotateX}deg)`;
-      }
-      if(sourisX>middleX){
-        const newX = sourisX-right;
-        const newMidlleX = middleX-right;
-        const rotateX = (20-(newX*20)/newMidlleX);
-        const newY = sourisY - top;
-        const newMidlleY = middleY-top;
-        const rotateY = 10-((newY*10)/newMidlleY);
-        imgRotate.current.style.transform = `rotateX(${rotateY}deg) rotateY(${rotateX}deg)`;
-      }
-    }
-
-    if(sourisY>middleY){
-      if(sourisX<=middleX){
-        const newX = sourisX-right;
-        const newMidlleX = middleX-right;
-        const rotateX = (20-(newX*20)/newMidlleX);
-        const newY = sourisY - top;
-        const newMidlleY = middleY-top;
-        const rotateY = 10-((newY*10)/newMidlleY);
-        imgRotate.current.style.transform = ` rotateX(${rotateY}deg) rotateY(${rotateX}deg)`;
-      }
-      if(sourisX>middleX){
-        const newX = sourisX-right;
-        const newMidlleX = middleX-right;
-        const rotateX = (20-(newX*20)/newMidlleX);
-        const newY = sourisY - top;
-        const newMidlleY = middleY-top;
-        const rotateY = 10-((newY*10)/newMidlleY);
-        imgRotate.current.style.transform = `rotateX(${rotateY}deg) rotateY(${rotateX}deg)`;
-      }
-    }
-  }
-
-  const imgPositionBase = ()=>{
-    imgRotate.current.style.transform = `rotateX(6deg) rotateY(-16deg)`;
-}
-
-useEffect(() => {
-  paraVisual.current.style.transform = "translateY(0%)";
-  paraVisual.current.style.opacity = "1";
-  paraPhotoVisual.current.style.transform = "translateY(0%)";
-  paraPhotoVisual.current.style.opacity = "1";
-  paraUn.current.style.transform = "translateY(0%)";
-  paraDeux.current.style.transform = "translateY(0%)";
-  paraTrois.current.style.transform = "translateY(0%)";
-  paraBtn.current.style.transform = "translateY(0%)";
-
- 
-}, [])
-
-  
-
+  UseAffichagePhotoVisual(paraVisual,paraPhotoVisual,paraUn,paraDeux,paraTrois,paraBtn);
 
   return (
     <div className='supp1100:h-[800px] supp1740:h-[90vh]  h-auto mb-0 w-full flex flex-row items-center justify-center'>
@@ -120,7 +33,7 @@ useEffect(() => {
               <br></br>
               <span className='supp500:leading-[25px] leading-[20px]'>One-Click Setups</span>
           </p>
-          <div ref={paraBtn}  onMouseEnter={enterBtnOrange} onMouseLeave={leaveBtnOrange} className='supp680:h-[100px] supp680:rounded-[30px] translate-y-[50%] transition-transform duration-500 ease-out text-orangeCustom border border-solid border-red-500 w-[150px] h-[60px] ml-12 font-[Montreal-Medium] text-base rounded-[15px] flex flex-row items-center justify-center hover:cursor-pointer'>
+          <div ref={paraBtn}  onMouseEnter={()=>enterBtnOrange(textInvisibleBtnOrange,textVisibleBtnOrange)} onMouseLeave={()=>leaveBtnOrange(textInvisibleBtnOrange,textVisibleBtnOrange)} className='supp680:h-[100px] supp680:rounded-[30px] translate-y-[50%] transition-transform duration-500 ease-out text-orangeCustom border border-solid border-red-500 w-[150px] h-[60px] ml-12 font-[Montreal-Medium] text-base rounded-[15px] flex flex-row items-center justify-center hover:cursor-pointer'>
               <div className='w-full h-1/2 relative overflow-hidden'>
                 <p ref={textVisibleBtnOrange} className='visibleSpan'>Here for more</p>
                 <p ref={textInvisibleBtnOrange} className='invisibleSpan'>Click-me</p>
@@ -128,7 +41,7 @@ useEffect(() => {
           </div>
         </div>
         <div style={{transition:`transform 0.5s 0.4s ease-out,opacity 0.2s 0.4s ease-out`,boxShadow:`rgba(0, 0, 0, 0.24) 0px 3px 8px`}} ref={paraPhotoVisual} className='supp1100:w-[49%] supp1100:h-full supp1100:p-0 supp1100:mb-0 translate-y-[10%] opacity-0 h-auto w-full bg-blanc rounded-[50px] relative flex flex-row items-center justify-center perspective-[1500px] p-5 mb-4'>
-           <img ref={imgRotate} onMouseMove={imgMoove} onMouseLeave={imgPositionBase}  className='bigImgMerchandising supp500:w-[80vw] supp1100:w-[97%] supp1740:w-[90%]  w-[97%]  transition-all duration-200 ease ease-linear' src={allMannequin} alt="Représenation de huight personnes." />
+           <img ref={imgRotate} onMouseMove={(e)=>imgMoove(e,imgRotate)} onMouseLeave={()=>imgPositionBase(imgRotate)}  className='bigImgMerchandising supp500:w-[80vw] supp1100:w-[97%] supp1740:w-[90%]  w-[97%]  transition-all duration-200 ease ease-linear' src={allMannequin} alt="Représenation de huight personnes." />
         </div>
     </div>
 </div>

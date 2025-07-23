@@ -1,15 +1,10 @@
 import React from 'react'
 import atwork from '../../assets/img/artwork.png'
-import { useRef } from 'react'
-import { useEffect } from 'react'
+import UseInitialiseNav from '../../customHoocks/navHoocks/UseInitialiseNav'
 
 export default function Navbar() {
 
-  const nav = useRef();
-
-  useEffect(() => {
-    nav.current.style.transform ="translateY(0%)";
-  }, [])
+  const nav=UseInitialiseNav();
 
   return (
     <div ref={nav} className=' -translate-y-full  transition-transform duration-[400] delay-[600] ease-out w-full h-[10vh] sticky top-0 flex items-center justify-center z-[3000]' >

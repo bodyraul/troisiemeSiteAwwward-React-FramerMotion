@@ -1,17 +1,11 @@
 import React from 'react'
-import { useRef } from 'react'
-import { useEffect } from 'react'
 import ParaDefilementBar from '../../componentsReutilisable/ParaDefilementBar';
+import UseInitialiseBar from '../../customHoocks/defilementBarHoocks/UseInitialiseBar';
 
 
 export default function DefilementBar() {
 
-  const refBar = useRef();
-  const bar = useRef();
-
-  useEffect(() => {;
-        bar.current.style.transform ="translateY(0%)";
-      }, [])
+  const {refBar,bar} = UseInitialiseBar();
 
   return (
     <div ref={bar} className=' supp1740:h-[10vh] translate-y-1/2 transition-transform duration-[400] delay-700 ease-out w-full h-[150px] flex flex-row items-center justify-center'>
