@@ -1,6 +1,7 @@
 import React from 'react'
 import atwork from '../../assets/img/artwork.png'
 import UseInitialiseNav from '../../customHoocks/navHoocks/UseInitialiseNav'
+import LiNavbar from '../../componentsReutilisable/LiNavbar';
 
 export default function Navbar() {
 
@@ -11,10 +12,10 @@ export default function Navbar() {
       <nav style={{boxShadow:`rgba(0, 0, 0, 0.24) 0px 3px 8px`}} className=' supp1100:w-4/5 supp1740:py-0 supp1740:px-0 supp1740:w-[70%]  flex flex-row items-center justify-between w-[90%] max-w-[1800px] rounded-3xl bg-blanc h-4/5 z-3000 py-7 px-0 overflow-hidden'>
         <img className='pl-1 h-[150px] hover:cursor-pointer  rounded-3xl' src={atwork} alt="" />
         <ul className='flex items-center justify-around list-none'>
-            <li className='mr-[50px] text-noir font-[Montreal-Medium] font-medium text-center text-base p-2 transition-all duration-[400] hover:rounded-[10px] hover:bg-grisPlusGris hover:cursor-pointer'>Product</li>
-            <li className='mr-[50px] text-noir font-[Montreal-Medium] font-medium text-center text-base p-2 transition-all duration-[400] hover:rounded-[10px] hover:bg-grisPlusGris hover:cursor-pointer'>Custom</li>
-            <li className='mr-[50px] text-noir font-[Montreal-Medium] font-medium text-center text-base p-2 transition-all duration-[400] hover:rounded-[10px] hover:bg-grisPlusGris hover:cursor-pointer'>Price</li>
-            <li className='mr-[50px] text-noir font-[Montreal-Medium] font-medium text-center text-base p-2 transition-all duration-[400] hover:rounded-[10px] hover:bg-grisPlusGris hover:cursor-pointer'>Sign in</li>
+          <LiNavbar>Product</LiNavbar>
+          <LiNavbar>Custom</LiNavbar>
+          <LiNavbar>Price</LiNavbar>
+          <LiNavbar>Sign in</LiNavbar>
         </ul>
       </nav>
     </div>

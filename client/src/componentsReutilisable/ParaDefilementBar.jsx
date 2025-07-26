@@ -5,18 +5,20 @@ import marqueTrois from '../assets/img/marqueTrois.png'
 import marqueQuatre from '../assets/img/marqueQuatre.png'
 import marqueCinq from '../assets/img/marqueCinq.png'
 import marqueSix from '../assets/img/marqueSix.png'
+import ImgParaDefilement from './ImgParaDefilement'
+import tabParaDefilementBar from '../tools/paraDefilementBarTools/TabParaDefilementBar'
 
 
 
 export default function ParaDefilementBar() {
   return (
     <p className='supp1100:w-[1500px] w-[1111px] h-full flex flex-row items-center justify-around'>
-        <img className='h-[150%] mb-[10px]' src={marqueUne} alt="représentation d'un mot avec écrit APLACE. " />
-        <img className='h-[150%] mb-[10px]' src={marqueDeux} alt="représentation d'un mot avec écrit STUTTERHEIM RAINCOATS." />
-        <img className='h-[150%] mb-[15px]' src={marqueTrois} alt="représentation d'un mot avec écrit CHIMI." />
-        <img className='h-[150%] mb-[15px]' src={marqueQuatre} alt="représentation d'un mot avec écrit SANDVIST." />
-        <img className='h-[150%] mb-[15px]' src={marqueCinq} alt="représentation d'un mot avec écrit HOPE." />
-        <img className='h-[170%] mb-[17px]' src={marqueSix} alt="représentation d'un mot avec écrit KOTN." />
+        <ImgParaDefilement srcs={marqueUne} alts={tabParaDefilementBar[0]} />
+        <ImgParaDefilement srcs={marqueDeux} alts={tabParaDefilementBar[1]} />
+        <ImgParaDefilement srcs={marqueTrois} alts={tabParaDefilementBar[2]} />
+        <ImgParaDefilement srcs={marqueQuatre} alts={tabParaDefilementBar[3]} />
+        <ImgParaDefilement srcs={marqueCinq} alts={tabParaDefilementBar[4]} />
+        <ImgParaDefilement srcs={marqueSix} alts={tabParaDefilementBar[5]} />
     </p>
   )
 }
