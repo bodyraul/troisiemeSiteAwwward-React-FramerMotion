@@ -20,11 +20,11 @@ body {
   }
 
 
-.pageAccueil {
+.AllPageAnim {
   transition: all 0.5s ease-in-out;
 }
 
-.affichageAccueil {
+.partieIntro {
   height: 90vh;
   scrollbar-width: none;
   display: flex;
@@ -79,35 +79,82 @@ body {
   }
 
 .animAllBar{
-  -webkit-animation:animbare 90s linear  infinite;
-    -moz-animation: animbare 90s linear  infinite;
-     -ms-animation: animbare 90s linear  infinite;
-      -o-animation: animbare 90s linear  infinite;
-         animation: animbare 90s linear  infinite;
+  -webkit-animation:animbare 20s linear  infinite;
+    -moz-animation: animbare 20s linear  infinite;
+     -ms-animation: animbare 20s linear  infinite;
+      -o-animation: animbare 20s linear  infinite;
+         animation: animbare 20s linear  infinite;
 }
 
 @keyframes animbare {
   from{transform: translateX(0px);}
-  to{transform: translateX(-3000px);}
+  to{transform: translateX(-1200px);}
 }
 
-.animAllBarResponsive{
-  -webkit-animation: animbareResponsive 90s linear  infinite;
-    -moz-animation: animbareResponsive 90s linear  infinite;
-     -ms-animation: animbareResponsive 90s linear  infinite;
-      -o-animation: animbareResponsive 90s linear  infinite;
-         animation: animbareResponsive 90s linear  infinite;
-}
-
-@keyframes animbareResponsive {
+@keyframes animbareTablette {
   from{transform: translateX(0px);}
-  to{transform: translateX(-2222px);}
+  to{transform: translateX(-1600px);}
+}
+
+@keyframes animbarePcPortable {
+  from{transform: translateX(0px);}
+  to{transform: translateX(-2000px);}
+}
+
+@keyframes animbarePc{
+  from{transform: translateX(0px);}
+  to{transform: translateX(-2400px);}
+}
+
+@keyframes animbareBigScreen{
+  from{transform: translateX(0px);}
+  to{transform: translateX(-2800px);}
+}
+
+@media screen and (min-width: 480px) {
+    .animAllBar{
+    -webkit-animation:animbareTablette 20s linear  infinite;
+    -moz-animation: animbareTablette 20s linear  infinite;
+    -ms-animation: animbareTablette 20s linear  infinite;
+    -o-animation: animbareTablette 20s linear  infinite;
+    animation: animbareTablette 20s linear  infinite;
+  }
+}
+
+@media screen and (min-width: 768px) {
+    .animAllBar{
+    -webkit-animation:animbarePcPortable 20s linear  infinite;
+    -moz-animation: animbarePcPortable 20s linear  infinite;
+    -ms-animation: animbarePcPortable 20s linear  infinite;
+    -o-animation: animbarePcPortable 20s linear  infinite;
+    animation: animbarePcPortable 20s linear  infinite;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+    .animAllBar{
+    -webkit-animation:animbarePc 20s linear  infinite;
+    -moz-animation: animbarePc 20s linear  infinite;
+    -ms-animation: animbarePc 20s linear  infinite;
+    -o-animation: animbarePc 20s linear  infinite;
+    animation: animbarePc 20s linear  infinite;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+    .animAllBar{
+    -webkit-animation:animbareBigScreen 20s linear  infinite;
+    -moz-animation: animbareBigScreen 20s linear  infinite;
+    -ms-animation: animbareBigScreen 20s linear  infinite;
+    -o-animation: animbareBigScreen 20s linear  infinite;
+    animation: animbareBigScreen 20s linear  infinite;
+  }
 }
 
 
 
-@media screen and (max-width: 1740px) {
-    .affichageAccueil {
+@media screen and (max-width: 1600px) {
+    .partieIntro {
       height: auto;
     }
   }

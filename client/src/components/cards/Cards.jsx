@@ -17,8 +17,10 @@ export default function Cards({setcolor}) {
   const {descriptionImg,textUn,textDeux,textTrois,textQuatre}=tabCard;
 
     return (
-      <div  ref={englobeCardTitre}  className='h-[1200px] w-full flex flex-col items-center justify-center relative'>
-        <motion.div style={{color:ColorTitre,opacity:opacityTitre}}  className='sticky top-1/4 text-noir font-[Montreal-Bold] text-[50px] text-center leading-[50px] mb-[100px] transition-all duration-100 ease-linear'>Collections are your <br></br>key pages, but, <br></br>difficult to manage.</motion.div>
+      <div  ref={englobeCardTitre}  className='h-[1200px] w-full flex flex-col items-center justify-center relative '>
+        <motion.div style={{color:ColorTitre,opacity:opacityTitre}}  className='sticky top-1/4 text-noir font-[Montreal-Bold] text-[50px] text-center leading-[50px] mb-[100px] transition-all duration-100 ease-linear '>
+          Collections are your <br></br>key pages, but, <br></br>difficult to manage.
+        </motion.div>
         <div  className="w-[1320px] h-[500px] mb-[10px] relative">
           <CardSolo rotation={rotationCardUne} opacity={"0.3"} color={"#212121"}  source={imgDoight} left={"0px"} descriptionImg={descriptionImg[0]} textUn={textUn[0]} textDeux={textDeux[0]} textTrois={textTrois[0]} textQuatre={textQuatre[0]}></CardSolo>
           <CardSolo rotation={rotationCardDeux} opacity={"0.6"} color={"#2b2b2b"}  source={imgFleche} left={"33.3%"} descriptionImg={descriptionImg[1]} textUn={textUn[1]} textDeux={textDeux[1]} textTrois={textTrois[1]} textQuatre={textQuatre[1]}></CardSolo>

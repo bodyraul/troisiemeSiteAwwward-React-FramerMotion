@@ -19,7 +19,9 @@ export default function ResponsiveCards({setcolor}) {
 
   return (
   <div ref={englobeCardTitreResponsive} className='h-[1800px] w-full mt-[200px] flex flex-col items-center justify-center relative'>
-    <motion.div style={{color:ColorTitre,opacity:opacityTitre}}  className=' supp750:text-[50px] top-1/4 text-noir font-[Montreal-Bold] text-[25px] text-center leading-[50px] transition-all duration-100 ease-linear h-[350px] mb-0'>Collections are your most <br></br>important pages, but are <br></br>frustrating to manage</motion.div>
+    <motion.div style={{color:ColorTitre,opacity:opacityTitre}}  className=' supp750:text-[50px] top-1/4 text-noir font-[Montreal-Bold] text-[25px] text-center leading-[50px] transition-all duration-100 ease-linear h-[350px] mb-0'>
+      Collections are your most <br></br>important pages, but are <br></br>frustrating to manage
+    </motion.div>
     <div  className="w-[1320px] mb-[10px] h-[1450px] relative flex flex-col items-center justify-between">
       <ResponsiveCardSolo transform={rotationCardUneResponsive} background={"#212121"} opacity={"0.3"} src={imgDoight} alt={descriptionImg[0]} textUn={textUn[0]} textDeux={textDeux[0]} textTrois={textTrois[0]} textQuatre={textQuatre[0]}></ResponsiveCardSolo>
       <ResponsiveCardSolo transform={rotationCardDeuxResponsive} background={"#2b2b2b"} opacity={"0.6"} src={imgFleche} alt={descriptionImg[1]} textUn={textUn[1]} textDeux={textDeux[1]} textTrois={textTrois[1]} textQuatre={textQuatre[1]}></ResponsiveCardSolo>

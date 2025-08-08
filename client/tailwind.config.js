@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     screens:{
       supp405:"405px",
+      supp480:"480px",
       supp500:"500px",
       supp546:"546px",
       supp610:"610px",
@@ -13,8 +14,11 @@ module.exports = {
       supp680:"680px",
       supp721:"721px",
       supp750:"750px",
+      supp768:"768px",
+      supp1024:"1024px",
       supp1100:"1100px",
       supp1285:"1285px",
+      supp1600:"1600px",
       supp1740:"1740px",
     },
     extend: {
