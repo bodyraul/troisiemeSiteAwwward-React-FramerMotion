@@ -23,14 +23,14 @@ export default function Merchandising({setcolor}) {
   const {tabAlt,tabTitre,tabParaUn,tabParaDeux}=tabMerchandising;
 
   return (
-    <div ref={target}  className='h-[300vh] w-full flex flex-col items-center justify-start'>
+    <div ref={target}  className='h-[300vh] w-full flex flex-col items-center justify-start '>
       <div className='supp1740:w-[70%] sticky top-0 h-screen w-[80%] max-w-[1800px]'>
           <div className="h-[145px] w-full">
 
           </div>
           <div  className="h-[calc(100%-145px)] flex flex-row items-start justify-between">
             <div  className='relative flex flex-col items-center justify-between rounded-[70px] w-[42%] min-w-[500px] bg-cardUn h-[calc(100%-30px)] overflow-hidden'>
-                <motion.p style={{opacity:opacityParaBase,transform:scaleParaBase}} className="text-blanc text-[50px] font-[Montreal-Bold] text-start w-full pt-[50px] pr-0 pb-0 pl-[50px] transition-all duration-300 ease-linear">The dedicated <br></br>Fashion<br></br>Application</motion.p>
+                <motion.p style={{opacity:opacityParaBase,transform:scaleParaBase}} className="supp1600:text-[55px] supp1600:leading-[62px] text-blanc text-[45px] leading-[55px] font-[Montreal-Bold] text-start w-full pt-[50px] pr-0 pb-0 pl-[50px] transition-all duration-300 ease-linear">The dedicated <br></br>Fashion<br></br>Application</motion.p>
                 <motion.p style={{opacity:opacityParaBase,transform:scaleParaBase}}  className="text-grisClair leading-[28px] font-[Montreal-Bold] text-xl text-start w-full pt-[10px] pr-0 pb-0 pl-[50px] transition-all duration-300 ease-linear">TechNova lets you manage your<br></br> collection pages like a professional.</motion.p>
                 <ParaLeftMerchandising bottom={bottomParaUn} src={pointImg} alt={tabAlt[0]} opacity={opacityParaUn} transform={scaleParaUn} titre={tabTitre[0]} paraUn={tabParaUn[0]} paraDeux={tabParaDeux[0]}></ParaLeftMerchandising>
                 <ParaLeftMerchandising bottom={bottomParaDeux} src={triangleImg} alt={tabAlt[1]} opacity={opacityParaDeux} transform={scaleParaDeux} titre={tabTitre[1]} paraUn={tabParaUn[1]} paraDeux={tabParaDeux[1]}></ParaLeftMerchandising>

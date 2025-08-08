@@ -17,7 +17,7 @@ export default function ResponsiveMerchandising({setcolor}) {
   useSetColor(scrollYProgress,setcolor,0.17,"#181818",0.19,"#5F5F5F",0.2,"#bfbfbf",0.21,"#f3f3f3");
 
   return(
-        <div ref={target}  className='h-auto w-full flex flex-col items-center justify-start'>
+        <div ref={target}  className='supp768:mt-[250px] supp1024:mt-[700px] h-auto w-full flex flex-col items-center justify-start '>
           <ParaResponsiveMerchandising  srcUn={soloWomen} textUn={tabTextUn[0]} textDeux={tabTextDeux[0]} textTrois={""}  ></ParaResponsiveMerchandising>
           <ParaResponsiveMerchandising  srcUn={allMannequin} textUn={tabTextUn[1]} textDeux={tabTextDeux[1]} textTrois={""}  ></ParaResponsiveMerchandising>
           <ParaResponsiveMerchandising  srcUn={summerCollection} textUn={tabTextUn[2]} textDeux={tabTextDeux[2]} textTrois={""}  ></ParaResponsiveMerchandising>

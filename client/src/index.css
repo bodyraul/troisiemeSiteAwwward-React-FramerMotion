@@ -33,9 +33,7 @@ body {
   justify-content: space-between;
 }
 
-.partieCard {
-  height: 1300px;
-}
+
   
   .visibleSpan {
     position: absolute;
@@ -156,11 +154,6 @@ body {
 @media screen and (max-width: 1600px) {
     .partieIntro {
       height: auto;
-    }
-  }
-  @media screen and (max-width: 1350px) {
-    .partieCard {
-      height: 1900px;
     }
   }
   @media screen and (max-width: 1110px) {

@@ -18,6 +18,7 @@ module.exports = {
       supp1024:"1024px",
       supp1100:"1100px",
       supp1285:"1285px",
+      supp1350:"1350px",
       supp1600:"1600px",
       supp1740:"1740px",
     },

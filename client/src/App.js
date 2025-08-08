@@ -43,7 +43,7 @@ function App() {
           <PhotoVisual></PhotoVisual>
           <DefilementBar></DefilementBar>
         </div>
-        <div className='partieCard'>
+        <div className='h-[1460px] supp480:h-[1900px] supp1350:h-[1150px] supp1600:h-[1250px] '>
         {!matches? <Cards  setcolor={setcolor}></Cards> : <ResponsiveCards setcolor={setcolor}></ResponsiveCards>}
         </div>
         {!matches? <Merchandising  setcolor={setcolor}></Merchandising> : <ResponsiveMerchandising setcolor={setcolor} ></ResponsiveMerchandising>}
