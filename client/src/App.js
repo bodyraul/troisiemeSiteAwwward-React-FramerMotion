@@ -36,14 +36,14 @@ function App() {
       }
     }, [])
   return (
-    <div className="App">
-      <Navbar></Navbar>
+    <div >
       <div ref={refAccueil} className='AllPageAnim'>
+        <Navbar></Navbar>
         <div className='partieIntro'>
           <PhotoVisual></PhotoVisual>
           <DefilementBar></DefilementBar>
         </div>
-        <div className='h-[1460px] supp480:h-[1900px] supp1350:h-[1150px] supp1600:h-[1250px] '>
+        <div >
         {!matches? <Cards  setcolor={setcolor}></Cards> : <ResponsiveCards setcolor={setcolor}></ResponsiveCards>}
         </div>
         {!matches? <Merchandising  setcolor={setcolor}></Merchandising> : <ResponsiveMerchandising setcolor={setcolor} ></ResponsiveMerchandising>}

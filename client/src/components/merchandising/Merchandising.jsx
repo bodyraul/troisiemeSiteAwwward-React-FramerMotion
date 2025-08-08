@@ -24,7 +24,7 @@ export default function Merchandising({setcolor}) {
 
   return (
     <div ref={target}  className='h-[300vh] w-full flex flex-col items-center justify-start '>
-      <div className='supp1740:w-[70%] sticky top-0 h-screen w-[80%] max-w-[1800px]'>
+      <div className='sticky top-0 h-screen w-[80%] max-w-[1800px]'>
           <div className="h-[145px] w-full">
 
           </div>

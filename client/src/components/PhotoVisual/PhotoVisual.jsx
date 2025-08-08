@@ -16,9 +16,9 @@ export default function PhotoVisual() {
   UseAffichagePhotoVisual(paraVisual,paraPhotoVisual,paraUn,paraDeux,paraTrois,paraBtn);
 
   return (
-    <div className='supp480:h-[900px] supp480:w-[460px] supp768:w-[600px] supp768:h-[1050px] supp1024:w-full supp1024:h-[800px] supp1024:mt-[20px] supp1024:mb-[20px] supp1600:h-[90vh]  h-[600px] mb-0 w-[250px] flex flex-row items-center justify-center '>
-    <div className='supp1024:w-[80%] supp1024:flex-row  supp1600:w-[70%] h-full w-[90%] max-w-[1800px] flex flex-col items-center justify-between '>
-        <div style={{transition:`transform 0.5s ease-out,opacity 0.2s ease-out`,boxShadow:`rgba(0, 0, 0, 0.24) 0px 3px 8px`}} ref={paraVisual} className='supp1024:mb-0 supp1024:h-full supp1024:w-[49%] translate-y-[10%] opacity-0 h-full w-[100%] bg-blanc rounded-[50px] flex flex-col items-start justify-center mb-4'>
+    <div className='supp480:h-[900px] supp480:w-[460px] supp768:w-[600px] supp768:h-[1050px] supp1024:w-full supp1024:h-[800px]  supp1024:mb-[20px] supp1600:h-[80vh] supp1600:mt-0 supp1600:mb-0 h-[600px] mb-[16px] w-[250px] flex flex-row items-center justify-center'>
+    <div className='supp1024:w-[80%] supp1024:flex-row   h-full w-[90%] max-w-[1800px] flex flex-col items-center justify-between '>
+        <div style={{transition:`transform 0.5s ease-out,opacity 0.2s ease-out`,boxShadow:`rgba(0, 0, 0, 0.24) 0px 3px 8px`}} ref={paraVisual} className='supp1024:mb-0 supp1024:h-full supp1024:w-[49%] translate-y-[10%] opacity-0 h-full w-[100%] bg-blanc rounded-[50px] flex flex-col items-start justify-center mb-[16px]'>
           <p ref={paraUn} className='supp480:text-[18px] supp768:text-[23px] supp1024:text-[26px] supp1600:text-[30px] translate-y-[40%] transition-transform duration-500 ease-out my-0 mx-[48px]  flex flex-row items-center justify-around  font-[Montreal-Regular] text-[12px]'>
              <img className='supp480:w-[23px] supp768:w-[26px] supp1024:w-[29px] supp1600:w-[35px] w-[20px] ' src={imgDollard} alt="Représentation du symbole dollars."/>
              <span className='supp480:pl-[15px] pl-[10px]'>do your shop</span>
