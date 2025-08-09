@@ -11,11 +11,11 @@ const alts=["Représentation d'un homme.","Représentation de huight personnes."
 const src=[pointImg,triangleImg,statImg];
 const srcs=[soloWomen,allMannequin,summerCollection,statVente]
 
-const tabSrc={
+const tabImg={
     altParaBase:alt,
     srcParaBase:src,
     altParas:alts,
     srcParas:srcs
 }
 
-export default tabSrc;
+export default tabImg;

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion"
-import tabSrc from '../../tools/merchandisingTools/TabSrc'
+import tabSrc from '../../tools/merchandisingTools/TabImg'
 
 export default function ImgMerch({nb,tabAnim}) {
   return (

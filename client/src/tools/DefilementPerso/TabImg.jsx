@@ -12,10 +12,10 @@ const tabSrcUn = [cercle,virgule,inter];
 const tabSrcDeux = [femmeUne,femmeDeux,femmeTrois];
 const tabSrcTrois = [partner,communication,strategie];
 
-const tabSrcImg = {
+const tabImg = {
     srcUn :tabSrcUn,
     srcDeux : tabSrcDeux,
     srcTrois : tabSrcTrois
 }
 
-export default tabSrcImg
+export default tabImg
