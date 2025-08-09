@@ -22,7 +22,7 @@ export default function UseAnimDefilementPersoOnScroll(){
     const opacityParaDeux = useTransform(scrollYProgress,[0.45,0.55,0.8,0.9],[0,1,1,0]);
     const opacityParaTrois = useTransform(scrollYProgress,[0.8,0.9],[0,1]);
 
-    const tabAnimDefilementPerso = {
+    const tabAnim = {
       transformImg:[transformImgUne,transformImgDeux],
       transformContainer:[transformContainerUn,transformContainerDeux],
       defilementPara:[defilementParaUn,defilementParaDeux,defilementParaTrois],
@@ -31,6 +31,6 @@ export default function UseAnimDefilementPersoOnScroll(){
       ref:ref
     }
 
-    return tabAnimDefilementPerso
+    return tabAnim
 
 }

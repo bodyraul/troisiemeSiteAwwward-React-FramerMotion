@@ -1,7 +1,7 @@
 import React from 'react'
 import atwork from '../../assets/img/artwork.png'
 import UseInitialiseNav from '../../customHoocks/navHoocks/UseInitialiseNav'
-import LiNavbar from '../../componentsReutilisable/navComponentsReutilisable/LiNavbar';
+import LiNavbar from '../../componentsReutilisable/nav/LiNavbar';
 export default function Navbar() {
 
   const nav=UseInitialiseNav();

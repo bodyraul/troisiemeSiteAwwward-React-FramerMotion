@@ -3,7 +3,7 @@ import imgDoight from '../../assets/img/doights.svg'
 import imgFleche from '../../assets/img/triangles.png'
 import carrer from '../../assets/img/carrer.png'
 import { motion } from "framer-motion"
-import CardSolo from '../../componentsReutilisable/cardComponentsReutilisable/CardSolo'
+import CardSolo from '../../componentsReutilisable/cards/CardSolo'
 import useSetColor from '../../customHoocks/useSetColor'
 import UseAnimCardsOnScroll from '../../customHoocks/cardsHoocks/UseAnimCardOnScroll'
 
