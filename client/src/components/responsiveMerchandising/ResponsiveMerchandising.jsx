@@ -3,7 +3,7 @@ import soloWomen from '../../assets/img/soloWomen.jpg'
 import allMannequin from"../../assets/img/allMannequin.jpg"
 import summerCollection from"../../assets/img/summerCollection.jpg"
 import statVente from"../../assets/img/statVente.jpg"
-import ParaResponsiveMerchandising from '../../componentsReutilisable/ParaResponsiveMerchandising'
+import ParaResponsiveMerchandising from '../../componentsReutilisable/MerchandisingComponentsReutilisable/ParaResponsiveMerchandising'
 import useSetColor from '../../customHoocks/useSetColor'
 import tabResponsiveMerchandising from '../../tools/responsiveMerchandisingTools/TabResponsibeMerchandising'
 import UseResMerchanOnScroll from '../../customHoocks/responsiveMerchandisingHoocks/UseResMerchanOnScroll'

@@ -7,8 +7,8 @@ import soloWomen from '../../assets/img/soloWomen.jpg'
 import allMannequin from"../../assets/img/allMannequin.jpg"
 import summerCollection from"../../assets/img/summerCollection.jpg"
 import statVente from"../../assets/img/statVente.jpg"
-import ImgRightMerchandising from '../../componentsReutilisable/ImgRightMerchandising'
-import ParaLeftMerchandising from '../../componentsReutilisable/ParaLeftMerchandising'
+import ImgRightMerchandising from '../../componentsReutilisable/MerchandisingComponentsReutilisable/ImgRightMerchandising'
+import ParaLeftMerchandising from '../../componentsReutilisable/MerchandisingComponentsReutilisable/ParaLeftMerchandising'
 import useSetColor from '../../customHoocks/useSetColor'
 import tabMerchandising from '../../tools/merchandisingTools/TabMerchandising'
 import UseAnimMerchandisingOnScroll from '../../customHoocks/merchandisingHoocks/UseAnimMerchandisingOnScroll'

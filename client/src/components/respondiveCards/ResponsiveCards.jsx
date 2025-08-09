@@ -3,7 +3,7 @@ import imgDoight from '../../assets/img/doights.svg'
 import imgFleche from '../../assets/img/triangles.png'
 import carrer from '../../assets/img/carrer.png'
 import { motion } from "framer-motion"
-import ResponsiveCardSolo from '../../componentsReutilisable/ResponsiveCardSolo'
+import ResponsiveCardSolo from '../../componentsReutilisable/cardComponentsReutilisable/ResponsiveCardSolo'
 import useSetColor from '../../customHoocks/useSetColor'
 import UseResponsiveCardOnScroll from '../../customHoocks/responsiveCardHoocks/UseResponsiveCardOnScroll'
 import tabCard from './../../tools/cardsTools/TabCard';

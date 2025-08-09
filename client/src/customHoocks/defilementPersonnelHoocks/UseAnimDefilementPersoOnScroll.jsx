@@ -1,6 +1,7 @@
 import {  useScroll,useTransform } from "framer-motion"
 import { useRef } from 'react'
 
+
 export default function UseAnimDefilementPersoOnScroll(){
 
     const ref=useRef();
@@ -21,6 +22,15 @@ export default function UseAnimDefilementPersoOnScroll(){
     const opacityParaDeux = useTransform(scrollYProgress,[0.45,0.55,0.8,0.9],[0,1,1,0]);
     const opacityParaTrois = useTransform(scrollYProgress,[0.8,0.9],[0,1]);
 
-    return {ref,scrollYProgress,transformImgUne,transformImgDeux,transformContainerUn,transformContainerDeux,defilementParaUn,defilementParaDeux,defilementParaTrois,opacityParaUn,opacityParaDeux,opacityParaTrois}
+    const tabAnimDefilementPerso = {
+      transformImg:[transformImgUne,transformImgDeux],
+      transformContainer:[transformContainerUn,transformContainerDeux],
+      defilementPara:[defilementParaUn,defilementParaDeux,defilementParaTrois],
+      opacityPara:[opacityParaUn,opacityParaDeux,opacityParaTrois],
+      scrollYProgress:scrollYProgress,
+      ref:ref
+    }
+
+    return tabAnimDefilementPerso
 
 }

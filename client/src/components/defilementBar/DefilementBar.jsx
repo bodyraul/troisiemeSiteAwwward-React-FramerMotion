@@ -1,5 +1,5 @@
 import React from 'react'
-import ParaDefilementBar from '../../componentsReutilisable/ParaDefilementBar';
+import ParaDefilementBar from '../../componentsReutilisable/defilementBarComponentsReutilisable/ParaDefilementBar';
 import UseInitialiseBar from '../../customHoocks/defilementBarHoocks/UseInitialiseBar';
 
 
