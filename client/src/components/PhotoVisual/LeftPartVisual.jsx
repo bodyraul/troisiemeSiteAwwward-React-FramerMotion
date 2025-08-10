@@ -9,7 +9,7 @@ export default function LeftPartVisual() {
     const {paraVisual,paraUn,paraDeux,paraTrois,paraBtn,textInvisibleBtnOrange,textVisibleBtnOrange}=UseLoadLeftVisual();
 
   return (
-    <div style={{transition:`transform 0.5s ease-out,opacity 0.2s ease-out`,boxShadow:`rgba(0, 0, 0, 0.24) 0px 3px 8px`}} ref={paraVisual} className='supp1024:mb-0 supp1024:h-full supp1024:w-[49%] translate-y-[10%] opacity-0 h-full w-[100%] bg-blanc rounded-[50px] flex flex-col items-start justify-center mb-[16px]'>
+    <div style={{transition:`transform 0.5s ease-out,opacity 0.2s ease-out`,boxShadow:`rgba(0, 0, 0, 0.24) 0px 3px 8px`}} ref={paraVisual} className='supp480:mb-[40px] supp768:mb-[50px] supp1024:mb-[0px] supp1024:h-full supp1024:w-[49%] translate-y-[10%] opacity-0 h-full w-[100%] bg-blanc rounded-[50px] flex flex-col items-start justify-center mb-[30px]'>
         <p ref={paraUn} className='supp480:text-[18px] supp768:text-[23px] supp1024:text-[26px] supp1600:text-[30px] translate-y-[40%] transition-transform duration-500 ease-out my-0 mx-[48px]  flex flex-row items-center justify-around  font-[Montreal-Regular] text-[12px]'>
             <img className='supp480:w-[23px] supp768:w-[26px] supp1024:w-[29px] supp1600:w-[35px] w-[20px] ' src={imgDollard} alt="Représentation du symbole dollars."/>
             <span className='supp480:pl-[15px] pl-[10px]'>do your shop</span>
