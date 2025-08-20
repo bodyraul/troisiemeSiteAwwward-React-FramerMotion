@@ -1,5 +1,5 @@
 import React from 'react'
-import imgStronger from '../../assets/img/stronger.png'
+import imgStronger from '../../assets/img/partner.jpg'
 import femmeUne from '../../assets/img/femme-Une.jpg'
 
 
