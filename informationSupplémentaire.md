@@ -17,7 +17,7 @@ Exemple de composant :
 Ici j'ai créé le composant "Cards". 
 Le Custom Hook "UseAnimCardsOnScroll" permet de changer la couleur et l'opacité de la div en fonction du scroll à l'aide de framer motion. 
 Le Custom Hook "useSetColor" permet de changer la couleur de fond de l'application en fonction du scroll grâce au setteur (setcolor) que l'on a reçu en props. 
-Enfin, on passe la variable "nb" en props des composant CardSolo pour gérer une différence de texte que l'on affiche dans une balise "p" et d'une image.
+Enfin, on passe la variable "nb" en props des composant CardSolo pour gérer une différence de texte et d'une image.
 
 Site Responsive : 
 
